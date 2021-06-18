@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="582" height="168.125" viewBox="0 0 582 168.125">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2171" data-name="Rectangle 2171" width="582" height="168" rx="32" transform="translate(895 448.875)" fill="#2c9f2c" stroke="#2c9f2c" stroke-width="2"/>
+    </clipPath>
+    <filter id="Ellipse_1667" x="-157" y="67.125" width="262" height="262" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1667-2" x="451" y="-164.875" width="262" height="262" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="dashboard-failure-aqarx-token-purchase-banner" transform="translate(-895 -491.875)">
+    <g id="Group_5951" data-name="Group 5951" transform="translate(0 43)">
+      <g id="Rectangle_2171-2" data-name="Rectangle 2171" transform="translate(895 449)" fill="rgba(254,7,7,0.2)" stroke="#fe0707" stroke-width="2">
+        <rect width="582" height="168" rx="32" stroke="none"/>
+        <rect x="1" y="1" width="580" height="166" rx="31" fill="none"/>
+      </g>
+      <g id="Mask_Group_31" data-name="Mask Group 31" clip-path="url(#clip-path)">
+        <g id="Group_5943" data-name="Group 5943" transform="translate(-595 -13)" opacity="0.25">
+          <g id="Group_5944" data-name="Group 5944" transform="translate(-18 181)">
+            <g id="Group_5945" data-name="Group 5945" transform="translate(-1 17)">
+              <g transform="matrix(1, 0, 0, 1, 1509, 263.88)" filter="url(#Ellipse_1667)">
+                <circle id="Ellipse_1667-3" data-name="Ellipse 1667" cx="101" cy="101" r="101" transform="translate(-137 97.13)" fill="#fe0707" opacity="0.21"/>
+              </g>
+              <circle id="Ellipse_1668" data-name="Ellipse 1668" cx="88" cy="88" r="88" transform="translate(1385 374)" fill="#fe0707" opacity="0.21"/>
+            </g>
+            <g id="Component_40_6" data-name="Component 40 – 6" transform="translate(1979 146)">
+              <g id="Group_5946" data-name="Group 5946" transform="translate(-1372 -361)" opacity="0.98">
+                <g transform="matrix(1, 0, 0, 1, 901, 495.88)" filter="url(#Ellipse_1667-2)">
+                  <circle id="Ellipse_1667-4" data-name="Ellipse 1667" cx="101" cy="101" r="101" transform="translate(471 -134.88)" fill="#fe0707" opacity="0.21"/>
+                </g>
+                <circle id="Ellipse_1668-2" data-name="Ellipse 1668" cx="88" cy="88" r="88" transform="translate(1385 374)" fill="#fe0707" opacity="0.21"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="Group_5950" data-name="Group 5950">
+        <g id="Group_5758" data-name="Group 5758" transform="translate(879.821 278.875)">
+          <g id="Group_5941" data-name="Group 5941" transform="translate(-10.821 -0.001)">
+            <text id="Sorry_Loreup_IpsumeLorem_ipsum_or_lipsum_as_it_is_sometimes_known_is_dummy_text_used_in_laying_out_print_graphic_or_web_designs._" data-name="Sorry! Loreup IpsumeLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. " transform="translate(180.179 230.125)" fill="#fe0707" font-size="18" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="0.05em"><tspan x="0" y="17">Sorry! Loreup IpsumeLorem ipsum, </tspan><tspan x="0" y="42">or lipsum as it is sometimes known, </tspan></text>
+          </g>
+        </g>
+        <g id="Group_5758-2" data-name="Group 5758" transform="translate(879.821 278.875)">
+          <g id="Sorry" transform="translate(75.179 217.125)">
+            <g id="Group_5941-2" data-name="Group 5941" transform="translate(-88 -217.125)">
+              <g id="Group_1490" data-name="Group 1490" transform="translate(88 217.125)">
+                <path id="Path_3701" data-name="Path 3701" d="M38.943,76.347A36.943,36.943,0,1,1,51.419,4.626a4.089,4.089,0,0,1-2.767,7.7A28.729,28.729,0,1,0,65.767,28.994a4.088,4.088,0,0,1,7.622-2.961A36.96,36.96,0,0,1,38.943,76.347Z" transform="translate(-2 -2.462)" fill="#fe0707"/>
+              </g>
+            </g>
+            <g id="Group_16660" data-name="Group 16660" transform="translate(2 -0.001)">
+              <g id="Group_5947" data-name="Group 5947" transform="translate(0.852 16.296)">
+                <line id="Line_26" data-name="Line 26" y1="25.295" x2="25.295" transform="translate(24.5 8)" fill="none" stroke="#fe0707" stroke-linecap="round" stroke-width="7"/>
+                <line id="Line_27" data-name="Line 27" y1="25.295" x2="25.295" transform="translate(49.795 8) rotate(90)" fill="none" stroke="#fe0707" stroke-linecap="round" stroke-width="7"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

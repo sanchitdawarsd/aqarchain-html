@@ -1,0 +1,21 @@
+/******************************
+ *  AQARCHAIN-X - CUSTOM THEME  *
+ ******************************/
+
+// REQUIRED IMPORTS
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// SETTING OVERRIDES
+@import "theme_includes/0_theme_settings";
+
+// BOOTSTRAP MAIN
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// THEME IMPORTS
+@import "theme_includes/1_theme_imports";
+@import "theme_includes/2_theme_general";
+@import "theme_includes/3_theme_form";
+@import "theme_includes/4_theme_header"; 
+@import "theme_includes/5_theme_footer";

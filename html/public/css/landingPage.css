@@ -1,0 +1,750 @@
+/******************************
+ *  LANDING PAGE THEME  *
+ ******************************/
+/**********************
+ * SETTINGS OVERRIDES *
+ **********************/
+.slant-div {
+  position: relative;
+  display: inline-block;
+  padding: 3px 50px 3px 50px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.slant-div:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FBB042;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: skew(-45deg);
+  transform: skew(-45deg);
+  z-index: 1;
+}
+
+.sub-content {
+  color: #707070;
+}
+
+.left-gradient-heading {
+  position: relative;
+  padding: 10px 0px;
+  padding-left: 15px;
+}
+
+.left-gradient-heading:before {
+  position: absolute;
+  content: " ";
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#FBB042), color-stop(4%, #FBB042), color-stop(39%, #FDC010), to(#FFDE11)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+  width: 5px;
+  top: 4px;
+  left: 0;
+  bottom: 0;
+}
+
+#landing-page-header {
+  background: #1E282F;
+  background: url("/public/images/landing-page-header-bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+@media (max-width: 1439.98px) {
+  #landing-page-header {
+    background-size: 100% 65%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #landing-page-header {
+    background-size: auto;
+  }
+}
+
+#landing-page-header .header-nav .nav-item {
+  position: relative;
+  margin-right: 60px;
+}
+
+#landing-page-header .header-nav .nav-item .nav-link {
+  color: #D1D0CE;
+  font-size: 18px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+
+#landing-page-header .header-nav .nav-item .nav-link:hover {
+  color: white;
+}
+
+#landing-page-header .header-nav .nav-item:first-of-type {
+  margin-left: 60px;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-header .header-nav .nav-item:first-of-type {
+    margin-left: 0;
+  }
+}
+
+#landing-page-header .header-nav .nav-item:last-of-type {
+  margin-right: 0;
+}
+
+#landing-page-header .header-nav .nav-item.active .nav-link, #landing-page-header .header-nav .nav-item:hover .nav-link {
+  color: white;
+}
+
+#landing-page-header .header-nav .nav-item.active .nav-link:after, #landing-page-header .header-nav .nav-item:hover .nav-link:after {
+  position: absolute;
+  content: " ";
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#FBB042), color-stop(4%, #FBB042), color-stop(39%, #FDC010), to(#FFDE11)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+  width: 15px;
+  height: 3px;
+  left: 40%;
+  bottom: 0;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-header .header-heading {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+
+#landing-page-next-token-sale-section #landing-page-next-token-sale-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-next-token-sale-section #landing-page-next-token-sale-section-container {
+    padding: 120px 0 90px;
+  }
+}
+
+#landing-page-next-token-sale-section #landing-page-next-token-sale-section-container .card-wrapper {
+  position: relative;
+}
+
+#landing-page-next-token-sale-section #landing-page-next-token-sale-section-container .background-card {
+  position: absolute;
+  left: 10%;
+  height: 300px;
+  width: 80%;
+  margin: auto;
+  bottom: -50px;
+  z-index: 2;
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#FBB042), color-stop(4%, #FBB042), color-stop(39%, #FDC010), to(#FFDE11)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+  border-radius: 47px;
+}
+
+#landing-page-next-token-sale-section #landing-page-next-token-sale-section-container .inner-card {
+  position: relative;
+  z-index: 3;
+  background-color: white;
+  -webkit-box-shadow: 0px 23px 27px #0000002E;
+          box-shadow: 0px 23px 27px #0000002E;
+  border-radius: 47px;
+  margin-top: -60px;
+}
+
+#landing-page-next-token-sale-section #landing-page-next-token-sale-section-container .timer-card {
+  display: inline-block;
+  padding: 30px;
+  width: 160px;
+  height: 180px;
+  -webkit-box-shadow: 0px 10px 20px #00000029;
+          box-shadow: 0px 10px 20px #00000029;
+  border-radius: 7px;
+}
+
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  #landing-page-next-token-sale-section #landing-page-next-token-sale-section-container .timer-card {
+    display: block;
+    width: auto;
+    padding: 30px 0px;
+  }
+}
+
+#landing-page-next-token-sale-section #landing-page-next-token-sale-section-container .timer-card .time {
+  font-size: 50px;
+}
+
+@media (max-width: 1439.98px) {
+  #landing-page-next-token-sale-section #landing-page-next-token-sale-section-container .timer-card .time {
+    font-size: 40px;
+  }
+}
+
+#landing-page-aqarchain-token-sale-section #landing-page-aqarchain-token-sale-section-container {
+  padding: 60px 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-aqarchain-token-sale-section #landing-page-aqarchain-token-sale-section-container {
+    padding: 120px 0 90px;
+  }
+}
+
+#landing-page-what-is-aqarchain-section #landing-page-what-is-aqarchain-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-what-is-aqarchain-section #landing-page-what-is-aqarchain-section-container {
+    padding: 120px 0 90px;
+    padding-bottom: 160px;
+  }
+}
+
+#landing-page-what-is-aqarchain-section #landing-page-what-is-aqarchain-section-container .aqarchain-content {
+  font-size: 17px;
+}
+
+#landing-page-fractional-ownership-section {
+  background-color: #1E282F;
+}
+
+#landing-page-fractional-ownership-section #landing-page-fractional-ownership-section-container {
+  padding: 60px 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-fractional-ownership-section #landing-page-fractional-ownership-section-container {
+    padding: 20px 0 90px;
+    padding-bottom: 0;
+  }
+}
+
+#landing-page-fractional-ownership-section #landing-page-fractional-ownership-section-container .fractional-ownership-content {
+  color: #D1D0CE;
+  font-size: 17px;
+  padding-right: 100px;
+}
+
+#landing-page-fractional-ownership-section #landing-page-fractional-ownership-section-container .fractional-ownership-artwork {
+  width: 115%;
+  max-width: 115%;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-fractional-ownership-section #landing-page-fractional-ownership-section-container .fractional-ownership-artwork {
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+#landing-page-about-aqarchain-section {
+  background-image: url("/public/images/landing-page-about-aqarchain-background-top.svg"), url("/public/images/landing-page-about-aqarchain-background-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 0px right 100px, bottom -30px left;
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  #landing-page-about-aqarchain-section {
+    background-size: 20%, 20% !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #landing-page-about-aqarchain-section {
+    background-size: 35%, 35% !important;
+  }
+}
+
+#landing-page-about-aqarchain-section #landing-page-about-aqarchain-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-about-aqarchain-section #landing-page-about-aqarchain-section-container {
+    padding: 120px 0 90px;
+    padding-bottom: 160px;
+  }
+}
+
+#landing-page-difc-section {
+  background-color: #1E282F;
+}
+
+#landing-page-difc-section #landing-page-difc-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-difc-section #landing-page-difc-section-container {
+    padding: 120px 0 90px;
+  }
+}
+
+#landing-page-difc-section #landing-page-difc-section-container .difc-content {
+  color: #D1D0CE;
+  padding-right: 25px;
+}
+
+#landing-page-difc-section #landing-page-difc-section-container .difc-artwork {
+  margin-top: -270px;
+  margin-bottom: -80px;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-difc-section #landing-page-difc-section-container .difc-artwork {
+    margin-top: -40px;
+    margin-bottom: 0;
+  }
+}
+
+#landing-page-aqarchain-token-ecosystem-section {
+  background-image: url("/public/images/landing-page-aqarchain-token-ecosystem-section-bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom -20px right 110px;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-aqarchain-token-ecosystem-section {
+    background: none !important;
+  }
+}
+
+#landing-page-aqarchain-token-ecosystem-section #landing-page-aqarchain-token-ecosystem-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-aqarchain-token-ecosystem-section #landing-page-aqarchain-token-ecosystem-section-container {
+    padding: 120px 0 90px;
+    padding-bottom: 130px;
+  }
+}
+
+#landing-page-aqarchain-token-ecosystem-section #landing-page-aqarchain-token-ecosystem-section-container .token-ecosystem-card {
+  position: relative;
+  border-radius: 8px;
+  min-height: 455px;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-aqarchain-token-ecosystem-section #landing-page-aqarchain-token-ecosystem-section-container .token-ecosystem-card {
+    min-height: unset;
+  }
+}
+
+#landing-page-aqarchain-token-ecosystem-section #landing-page-aqarchain-token-ecosystem-section-container .token-ecosystem-card:hover {
+  -webkit-box-shadow: 0px 12px 24px #00000013;
+          box-shadow: 0px 12px 24px #00000013;
+}
+
+#landing-page-aqarchain-token-ecosystem-section #landing-page-aqarchain-token-ecosystem-section-container .token-ecosystem-card:hover::after {
+  position: absolute;
+  content: " ";
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#FBB042), color-stop(4%, #FBB042), color-stop(39%, #FDC010), to(#FFDE11)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+  height: 7px;
+  width: 100%;
+  border-radius: 0px 0px 8px 8px;
+  right: 0;
+  bottom: 0;
+}
+
+#landing-page-aqarchain-token-ecosystem-section #landing-page-aqarchain-token-ecosystem-section-container .token-ecosystem-card:hover .icon-container {
+  background-color: #1E282F;
+}
+
+#landing-page-aqarchain-token-ecosystem-section #landing-page-aqarchain-token-ecosystem-section-container .token-ecosystem-card .icon-container {
+  display: inline-block;
+  padding: 18px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 12px 24px #00000013;
+          box-shadow: 0px 12px 24px #00000013;
+}
+
+#landing-page-aqarchain-token-ecosystem-section #landing-page-aqarchain-token-ecosystem-section-container .token-ecosystem-card .icon-container .icon {
+  width: 50px !important;
+}
+
+#landing-page-aqarchain-users-section {
+  background-image: url("/public/images/landing-page-aqarchain-user-section-bg.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 90%;
+}
+
+#landing-page-aqarchain-users-section #landing-page-aqarchain-users-section-container {
+  padding: 60px 0;
+  margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-aqarchain-users-section #landing-page-aqarchain-users-section-container {
+    margin-bottom: 190px;
+  }
+}
+
+#landing-page-aqarchain-users-section #landing-page-aqarchain-users-section-container .aqarchain-user-card {
+  padding: 22px;
+  background-color: white;
+  -webkit-box-shadow: 10px 10px 20px #00000029;
+          box-shadow: 10px 10px 20px #00000029;
+  border-radius: 30px;
+  background-image: url("/public/images/landing-page-feature-section-card-bg.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  margin-bottom: -200px;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-aqarchain-users-section #landing-page-aqarchain-users-section-container .aqarchain-user-card {
+    margin-bottom: 0;
+  }
+}
+
+#landing-page-aqarchain-users-section #landing-page-aqarchain-users-section-container .aqarchain-user-card .aqarchain-user-icon {
+  width: 50px;
+  height: 50px;
+}
+
+#landing-page-platform-features-section #landing-page-platform-features-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-platform-features-section #landing-page-platform-features-section-container {
+    padding: 120px 0 90px;
+    padding-bottom: 160px;
+  }
+}
+
+#landing-page-platform-features-section #landing-page-platform-features-section-container .feature-card {
+  margin: 0px 20px;
+}
+
+#landing-page-platform-features-section #landing-page-platform-features-section-container .feature-card .title-container {
+  border-radius: 14px;
+  padding: 15px;
+  -webkit-box-shadow: 4px 4px 17px -4px rgba(0, 0, 0, 0.21);
+          box-shadow: 4px 4px 17px -4px rgba(0, 0, 0, 0.21);
+  border-left: 10px solid black;
+}
+
+#landing-page-platform-features-section #landing-page-platform-features-section-container .feature-card .content-container {
+  border-radius: 14px;
+  padding: 30px 50px;
+  min-height: 250px;
+  -webkit-box-shadow: 4px 4px 17px -4px rgba(0, 0, 0, 0.21);
+          box-shadow: 4px 4px 17px -4px rgba(0, 0, 0, 0.21);
+  background-color: white;
+  background-image: url("/public/images/landing-page-feature-section-card-bg.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+#landing-page-platform-features-section #landing-page-platform-features-section-container .feature-card .feature-icon {
+  width: 40px;
+}
+
+#landing-page-technology-section {
+  background-image: url("/public/images/landing-page-technology-section-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  background-color: #1E282F;
+  border-radius: 150px 0px 0px 0px;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-technology-section {
+    border-radius: 0px;
+  }
+}
+
+#landing-page-technology-section #landing-page-technology-section-container {
+  padding: 60px 0;
+  margin-bottom: 120px;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-technology-section #landing-page-technology-section-container {
+    margin-bottom: 30px;
+  }
+}
+
+#landing-page-technology-section #landing-page-technology-section-container .technology-content {
+  color: #D1D0CE;
+}
+
+#landing-page-technology-section #landing-page-technology-section-container .tezos-artwork {
+  margin-bottom: -340px;
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-technology-section #landing-page-technology-section-container .tezos-artwork {
+    margin-bottom: 0;
+  }
+}
+
+#landing-page-team-section #landing-page-team-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-team-section #landing-page-team-section-container {
+    padding: 120px 0 90px;
+    padding-bottom: 20px;
+  }
+}
+
+#landing-page-team-section #landing-page-team-section-container .team-card {
+  border-radius: 8;
+  border-radius: 24px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+#landing-page-team-section #landing-page-team-section-container .team-card:hover {
+  -webkit-box-shadow: 10px 1px 99px #00000029;
+          box-shadow: 10px 1px 99px #00000029;
+}
+
+#landing-page-team-section #landing-page-team-section-container .team-card .card-img-top {
+  max-width: 210px;
+  margin: auto;
+}
+
+#landing-page-team-section #landing-page-team-section-container .team-card .fa-linkedin-in {
+  color: #D1D0CE;
+  font-size: 20px;
+}
+
+#landing-page-advisors-section #landing-page-advisors-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-advisors-section #landing-page-advisors-section-container {
+    padding: 120px 0 90px;
+  }
+}
+
+#landing-page-advisors-section #landing-page-advisors-section-container .advisors-card {
+  border-radius: 8;
+  -webkit-box-shadow: 10px 10px 20px #00000013;
+          box-shadow: 10px 10px 20px #00000013;
+  border: none;
+}
+
+#landing-page-advisors-section #landing-page-advisors-section-container .advisors-card:hover {
+  -webkit-box-shadow: 10px 10px 22px #00000018;
+          box-shadow: 10px 10px 22px #00000018;
+}
+
+#landing-page-advisors-section #landing-page-advisors-section-container .advisors-card .fa-linkedin-in {
+  color: #D1D0CE;
+  font-size: 20px;
+}
+
+#landing-page-investors-section_1 {
+  background-image: url("/public/images/landing-page-investors-section-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #1E282F;
+}
+
+#landing-page-investors-section_1 #landing-page-investors-section_1-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-investors-section_1 #landing-page-investors-section_1-container {
+    padding: 120px 0 90px;
+  }
+}
+
+#landing-page-investors-section_1 #landing-page-investors-section_1-container .investor-card {
+  position: relative;
+  border-radius: 8px;
+}
+
+#landing-page-investors-section_1 #landing-page-investors-section_1-container .investor-card:before {
+  position: absolute;
+  content: " ";
+  background: transparent -webkit-gradient(linear, left top, left bottom, from(#FBB042), color-stop(4%, #FBB042), color-stop(39%, #FDC010), to(#FFDE11)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+  width: 7px;
+  border-radius: 8px 0px 0px 8px;
+  top: 0px;
+  left: -1px;
+  bottom: 0;
+}
+
+#landing-page-investors-section_1 #landing-page-investors-section_1-container .investor-card .tezos-foundation-heading {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+#landing-page-investors-section_2 #landing-page-investors-section_2-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-investors-section_2 #landing-page-investors-section_2-container {
+    padding: 120px 0 90px;
+  }
+}
+
+#landing-page-tokenomics-section {
+  background-color: #1E282F;
+}
+
+#landing-page-tokenomics-section #landing-page-tokenomics-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-tokenomics-section #landing-page-tokenomics-section-container {
+    padding: 120px 0 90px;
+  }
+}
+
+#landing-page-tokenomics-section #landing-page-tokenomics-section-container .tokenomics-card {
+  background-color: rgba(255, 255, 255, 0.082);
+}
+
+#landing-page-tokenomics-section #landing-page-tokenomics-section-container .tokenomics-card .tokenomics-label {
+  color: rgba(255, 255, 255, 0.69);
+}
+
+#landing-page-tokenomics-section #landing-page-tokenomics-section-container .tokenomics-table .table {
+  background-color: rgba(255, 255, 255, 0.13);
+  border-bottom: 7px solid #8E7E3C;
+}
+
+#landing-page-tokenomics-section #landing-page-tokenomics-section-container .tokenomics-table .table tr, #landing-page-tokenomics-section #landing-page-tokenomics-section-container .tokenomics-table .table td, #landing-page-tokenomics-section #landing-page-tokenomics-section-container .tokenomics-table .table th {
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+#landing-page-tokenomics-section #landing-page-tokenomics-section-container .tokenomics-table .table td {
+  color: rgba(255, 255, 255, 0.69);
+}
+
+#landing-page-road-map-section #landing-page-road-map-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-road-map-section #landing-page-road-map-section-container {
+    padding: 120px 0 90px;
+  }
+}
+
+#landing-page-partner-associate-news-section {
+  background-color: #1E282F;
+}
+
+#landing-page-partner-associate-news-section #landing-page-partner-associate-news-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-partner-associate-news-section #landing-page-partner-associate-news-section-container {
+    padding: 120px 0 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #landing-page-partner-associate-news-section #landing-page-partner-associate-news-section-container .company-group {
+    padding: 60px;
+  }
+}
+
+#landing-page-contact-us-section #landing-page-contact-us-section-container {
+  padding: 60px 0;
+}
+
+@media (min-width: 1024px) {
+  #landing-page-contact-us-section #landing-page-contact-us-section-container {
+    padding: 120px 0 90px;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  #landing-page-contact-us-section #landing-page-contact-us-section-container .contact-us-artwork {
+    padding: 0 !important;
+  }
+}
+
+.landing-page-footer {
+  background-color: #1E282F;
+  padding: 1.2rem;
+}
+
+.landing-page-footer .footer-nav .nav-item {
+  padding-right: 60px;
+}
+
+.landing-page-footer .footer-nav .nav-item .nav-link {
+  color: #b9b9b9;
+  margin-bottom: 0;
+}
+
+.landing-page-footer .footer-nav .nav-item .nav-link:hover {
+  color: white;
+}
+
+.landing-page-footer .footer-nav .nav-item:last-of-type {
+  padding-right: 0;
+}
+
+@media (max-width: 1023.98px) {
+  .landing-page-footer .footer-nav .nav-item {
+    padding-right: 0;
+    margin: 10px 0px;
+  }
+}
+
+.landing-page-footer .copyright-section {
+  border-top: 1px solid rgba(209, 208, 206, 0.144);
+}
+
+.landing-page-footer .copyright-section .copyright-text {
+  color: #b9b9b9;
+}
+
+.landing-page-footer .social-nav a {
+  border: 2px solid white;
+  padding: 15px 17px;
+  border-radius: 15px;
+}
+
+.landing-page-footer .social-nav a.facebook {
+  padding: 15px 19px;
+}
+
+.landing-page-footer .social-nav a .fa-facebook-f {
+  font-size: 19px;
+}
+
+.landing-page-footer .social-nav a > * {
+  font-size: 16px;
+  color: white;
+}
+
+.landing-page-footer .social-nav a:hover {
+  background-color: white;
+}
+
+.landing-page-footer .social-nav a:hover > * {
+  color: #1E282F;
+}
+/*# sourceMappingURL=landingPage.css.map */

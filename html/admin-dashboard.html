@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/public/css/theme.css">
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="/public/css/dashboard.css">
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <title>Dashboard | AqarX</title>
+</head>
+
+<body>
+    <main class="wrapper container-lg">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="has-border-radius">
+            <ul class="nav nav-tabs nav-tabs dashboard-nav-tabs flex-column has-border-radius" id="dashboard-nav-tabs"
+                role="tablist">
+                <li class="nav-item text-center mb-3">
+                    <a href="/"><img class="p-3" src="/public/images/logo.svg" style="height: 110px" title="Aqarchain"
+                            alt="Aqarchain" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="dashboard-nav-tab-users-tab" data-toggle="tab"
+                        onclick="step18Completed()" href="#dashboard-nav-tab-users" role="tab"
+                        aria-controls="dashboard-nav-tab-users" aria-selected="true"><i class="mr-4"
+                            data-feather="grid"></i>Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="dashboard-nav-tab-token-tab" data-toggle="tab" onclick="step19Completed()"
+                        href="#dashboard-nav-tab-token" role="tab" aria-controls="dashboard-nav-tab-token"
+                        aria-selected="false"><i class="mr-4" data-feather="book"></i>Token</a>
+                </li>
+
+            </ul>
+            <ul class="nav nav-tabs dashboard-nav-tabs bottom-positioned has-border-radius flex-column">
+                <li class="nav-item text-center">
+                    <img class="w-90" src="/public/images/icon-dashboard-sidebar-help.svg">
+                </li>
+                <li class="nav-item cursor-pointer">
+                    <a class="nav-link" id="logout"><span class="mr-3" data-feather="log-out"></span>Log Out</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content" class="flex-grow-1">
+            <div id="page-content" class="py-lg-5 pl-lg-5 p-md-2 p-3">
+                <div id="dashboard-header" class="mb-5">
+                    <div id="dashboard-header-top"
+                        class="d-flex align-items-center justify-content-between has-box-shadow flex-lg-row flex-column px-5 py-4 has-border-radius">
+                        <div class="d-flex">
+
+                            <div class="profile-pic mr-2 mt-1">
+                                <img src="public/images/Avtar@3x.png" class="bg-gradient profile-pic">
+                            </div>
+                            <div class="user-section my-lg-0 my-3 ">
+                                <h4 class="font-weight-bold">Good Morning<span><img class="mx-2"
+                                            src="/public/images/icon-dashboard-header-coffee.svg"></span></h4>
+                                <h5>Daniel Pearson!</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex my-4">
+                            <div
+                                class="d-flex flex-row align-items-center has-border-radius justify-content-center w-100 p-2">
+                                <div class="input-group  input-group has-border-radius w-75">
+                                    <input type="text" class="form-control border-none " value="Search User">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-gradient-secondary text-white curved-border"><span
+                                                class="mr-2" data-feather="search"></span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="language-select d-flex align-items-center my-lg-0 my-3">
+                                <img class="mr-2" src="public/images/icon-dashboard-language.svg">
+                                <h5 class="font-weight-medium mb-0">Eng<span class="ml-2"
+                                        data-feather="chevron-down"></span>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="col-lg-12">
+                        <div class="tab-content dashboard-nav-tabs-content" id="dashboard-nav-tabs-content">
+                            <div class="tab-pane fade show active" id="dashboard-nav-tab-users" role="tabpanel"
+                                aria-labelledby="dashboard-nav-tab-users-tab">
+                                <div class="text-center text-lg-left  has-box-shadow has-border-radius my-1 admin-dashboard-bg">
+                                    <div class="Admin-dashboard-table-container table-responsive">
+                                        <table class="dashboard-table ">
+                                            <thead>
+                                                <tr>
+                                                    <th>User ID</th>
+                                                    <th>Email Address</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Country</th>
+                                                    <th>KYC</th>
+                                                    <th></th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody >
+                                                <tr>
+                                                    <td>#132-4522</td>
+                                                    <td>Diana.patel@gmail.com</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Somalia</td>
+                                                    <td><img src="/public/images/KYS Done@2x.png"></td>
+                                                    <td>
+                                                        <button type="button" onclick="step20Completed()"
+                                                            id="transaction-button"
+                                                            class="btn btn-dark dark-border w-100 has-border-radius">
+                                                            Transaction
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#132-4522</td>
+                                                    <td>Diana.patel@gmail.com</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Somalia</td>
+                                                    <td><img src="/public/images/KYS Done@2x.png"></td>
+                                                    <td>
+                                                        <button type="button" id="transaction-button"
+                                                            class="btn btn-dark dark-border w-100 has-border-radius">
+                                                            Transaction
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#132-4522</td>
+                                                    <td>Diana.patel@gmail.com</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Somalia</td>
+                                                    <td><img src="/public/images/KYS Done@2x.png"></td>
+                                                    <td>
+                                                        <button type="button"
+                                                            class="btn btn-dark dark-border w-100 has-border-radius">
+                                                            Transaction
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#132-4522</td>
+                                                    <td>Diana.patel@gmail.com</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Somalia</td>
+                                                    <td><img src="/public/images/KYC Pending@2x.png"></td>
+                                                    <td>
+                                                        <button type="button"
+                                                            class="btn btn-dark dark-border w-100 has-border-radius">
+                                                            Transaction
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#132-4522</td>
+                                                    <td>Diana.patel@gmail.com</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Somalia</td>
+                                                    <td><img src="/public/images/KYS Done@2x.png"></td>
+                                                    <td>
+                                                        <button type="button"
+                                                            class="btn btn-dark dark-border w-100 has-border-radius">
+                                                            Transaction
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#132-4522</td>
+                                                    <td>Diana.patel@gmail.com</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Somalia</td>
+                                                    <td><img src="/public/images/KYS Done@2x.png"></td>
+                                                    <td>
+                                                        <button type="button"
+                                                            class="btn btn-dark dark-border w-100 has-border-radius">
+                                                            Transaction
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#132-4522</td>
+                                                    <td>Diana.patel@gmail.com</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Somalia</td>
+                                                    <td><img src="/public/images/KYS Done@2x.png"></td>
+                                                    <td>
+                                                        <button type="button"
+                                                            class="btn btn-dark dark-border w-100 has-border-radius">
+                                                            Transaction
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#132-4522</td>
+                                                    <td>Diana.patel@gmail.com</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Somalia</td>
+                                                    <td><img src="/public/images/KYS Done@2x.png"></td>
+                                                    <td>
+                                                        <button type="button"
+                                                            class="btn btn-dark dark-border w-100 has-border-radius">
+                                                            Transaction
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#132-4522</td>
+                                                    <td>Diana.patel@gmail.com</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Timothy Diaz</td>
+                                                    <td>Somalia</td>
+                                                    <td><img src="/public/images/KYS Done@2x.png"></td>
+                                                    <td>
+                                                        <button type="button"
+                                                            class="btn btn-dark dark-border w-100 has-border-radius">
+                                                            Transaction
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                             
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav aria-label="..." class="pt-1 pb-5 ml-3 ">
+                                        <ul class="pagination ">
+                                            <li class="page-item disabled">
+                                                <span class="page-link">Previous</span>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item active">
+                                                <span class="page-link">
+                                                    2
+                                                    <span class="sr-only">(current)</span>
+                                                </span>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                            </div>
+                            <div id="transaction-table" role="tabpanel" class="d-none"
+                                aria-labelledby="transaction-button-tab">
+                                <div
+                                    class="text-center text-lg-left py-lg-4 px-lg-5 p-3 has-box-shadow has-border-radius my-4 dashboard-dark-bg">
+                                    <div class="d-flex">
+                                        <button class="goback-btn" onclick="step23Completed()">
+                                        <img src="/public/images/icon-go-back.png"></button>
+                                        <h5 class="text-white ml-1 mt-2 font-weight-bold"> #123-4522</h5>
+                                    </div>
+
+                                    <div class="d-flex ">
+                                        <label class="text-muted font-weight-bold mx-2 mt-3">Email Address</label>
+                                        <label class="text-muted font-weight-bold mx-3 mt-3">First Name</label>
+                                        <label class="text-muted font-weight-bold mx-3 mt-3">Last Name</label>
+                                        <label class="text-muted font-weight-bold mx-3 mt-3">DOB</label>
+                                        <label class="text-muted font-weight-bold mx-2 mt-3">Country</label>
+                                        <label class="text-muted font-weight-bold mx-3 mt-3">ID No.</label>
+                                        <label class="text-muted font-weight-bold mx-3 mt-3">KYC</label>
+                                        <label class="text-muted font-weight-bold mx-2 mt-3">Nationality</label>
+                                        <label class="text-muted font-weight-bold mx-2 mt-3">Psrt Number</label>
+                                    </div>
+
+                                    <div class="d-flex border-top">
+                                        <label
+                                            class="text-white font-weight-bold mx-2 mt-3 font-size-10">DianaDiaz@gmail.com</label>
+                                        <label class="text-white font-weight-bold mx-3 mt-3 font-size-10">Timothy
+                                            Diaz</label>
+                                        <label class="text-white font-weight-bold ml-4 mr-3 mt-3 font-size-10">Timothy
+                                            Diaz</label>
+                                        <label
+                                            class="text-white font-weight-bold ml-4 mr-3 mt-3 font-size-10">05/18/1962</label>
+                                        <label
+                                            class="text-white font-weight-bold mx-2 mt-3 font-size-10">Somalia</label>
+                                        <label
+                                            class="text-white font-weight-bold ml-4 mr-3 mt-3 font-size-10">362-4883</label>
+                                        <label class="text-white font-weight-bold ml-4 mr-3 mb-2 mt-3"><img
+                                                src="/public/images/KYS Done@2x.png"></label>
+                                        <label class="text-white font-weight-bold mx-5 mt-3 font-size-10">Madrid</label>
+                                        <label
+                                            class="text-white font-weight-bold mx-2 mt-3 font-size-10">#911-4341-911-4341</label>
+                                    </div>
+                                    <div class="Admin-dashboard-table-container table-responsive">
+                                        <table class="dashboard-table mt-5">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Date</th>
+                                                    <th>Buying Currency</th>
+                                                    <th>Transaction ID</th>
+                                                    <th>AQRX</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>09/08/2021</td>
+                                                    <td class="text-middle">
+                                                        <img class="icon-30"
+                                                            src="/public/images/icon-cryptocurrency-btc.svg">
+                                                        Bitcoin
+                                                    </td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>09/08/2021</td>
+                                                    <td class="text-middle">
+                                                        <img class="icon-30 ml-3 "
+                                                            src="/public/images/icon-cryptocurrency-ETH.svg">
+                                                        Ethereum
+                                                    </td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>09/08/2021</td>
+                                                    <td class="text-middle">
+                                                        <img class="icon-30"
+                                                            src="/public/images/icon-cryptocurrency-xtz.svg">
+
+                                                        USDT
+                                                    </td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>09/08/2021</td>
+                                                    <td>BONUS</td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>09/08/2021</td>
+                                                    <td>Bitcoin</td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>09/08/2021</td>
+                                                    <td>Bitcoin</td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>09/08/2021</td>
+                                                    <td>Bitcoin</td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>09/08/2021</td>
+                                                    <td>Bitcoin</td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>09/08/2021</td>
+                                                    <td>Bitcoin</td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>09/08/2021</td>
+                                                    <td>Bitcoin</td>
+                                                    <td>0x472SNF37EFSA4765FS66a5858</td>
+                                                    <td>400</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <nav aria-label="...">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled">
+                                                <span class="page-link">Previous</span>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item active">
+                                                <span class="page-link">
+                                                    2
+                                                    <span class="sr-only">(current)</span>
+                                                </span>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#">Next</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade d-none" id="dashboard-nav-tab-token" role="tabpanel"
+                                aria-labelledby="dashboard-nav-tab-token-tab">
+                                <section id="admin-dashboard-token-table">
+                                    <div id="admin-dashboard-token-section-container" class="container-lg p-0 ">
+                                        <div class="row no-gutters">
+                                            <div class="col-lg-12 col-md-12 col-12">
+                                                <div class="tab-content token-nav-content" id="token-nav-content">
+                                                    <div id="token-tab-links">
+                                                        <ul class="nav nav-tabs nav-tabs nav-justified md-tabs token-nav"
+                                                            id="token-tabs">
+                                                            <li class="nav-item mx-md-1 m-2">
+                                                                <a class="nav-link text-nowrap active"
+                                                                    id="token-tab-sale-round-tab"
+                                                                    href="#token-tab-sale-round" data-toggle="tab"
+                                                                    role="tab" aria-selected="true">Sale Round</a>
+                                                            </li>
+                                                            <li class="nav-item mx-md-1 m-2">
+                                                                <a class="nav-link" id="token-tab-allocation-tab"
+                                                                    href="#token-tab-allocation" data-toggle="tab"
+                                                                    role="tab" aria-selected="false">Allocation</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="tab-pane fade show active" id="token-tab-sale-round"
+                                                        role="tabpanel" aria-labelledby="token-tab-sale-round-tab">
+                                                        <div
+                                                            class="text-center text-lg-left  has-box-shadow has-border-radius my-1 admin-dashboard-bg">
+
+                                                            <div
+                                                                class="Admin-dashboard-table-container table-responsive ">
+                                                                <table class="dashboard-table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Sale</th>
+                                                                            <th>Amount</th>
+                                                                            <th>Sold Token</th>
+                                                                            <th>Balance Token</th>
+                                                                            <th></th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Seed Round</td>
+                                                                            <td>7,00,000.00</td>
+                                                                            <td>1,00,000.00</td>
+                                                                            <td>6,00,000</td>
+                                                                            <td>
+                                                                                <button type="button"
+                                                                                    onclick="step21Completed()"
+                                                                                    id="view-button"
+                                                                                    class="btn btn-dark dark-border w-100 has-border-radius">
+                                                                                    view Details
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Private Sale</td>
+                                                                            <td>12,00,000.00</td>
+                                                                            <td>2,00,000.00</td>
+                                                                            <td>10,00,000</td>
+                                                                            <td>
+                                                                                <button type="button"
+                                                                                    id="transaction-button"
+                                                                                    class="btn btn-dark dark-border w-100 has-border-radius">
+                                                                                    view Details
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Punlic Sale</td>
+                                                                            <td>1,000,000.00</td>
+                                                                            <td>1,00,000</td>
+                                                                            <td>9,00,000</td>
+                                                                            <td>
+                                                                                <button type="button"
+                                                                                    id="transaction-button"
+                                                                                    class="btn btn-dark dark-border w-100 has-border-radius">
+                                                                                    view Details
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                          
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="tab-pane fade" id="token-tab-allocation" role="tabpanel"
+                                                        aria-labelledby="token-tab-allocation-tab ">
+                                                        <div
+                                                            class="admin-dashboard-token-table-container table-responsive ">
+                                                            <table class="dashboard-table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Allocation</th>
+                                                                        <th>Amount</th>
+                                                                        <th>Tift amount</th>
+                                                                        <th></th>
+                                                                        <th></th>
+                                                                        <th>Balance Tokens</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>LP And Ex listing</td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <input type="text">
+                                                                        </td>
+                                                                        <td class="p-0">
+                                                                            <p  class="aqairchain-btn pl-3 pr-5 py-3 mb-0">Aqair ID</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-gradient text-white  w-100 has-border-radius ">
+                                                                                transfer
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <button type="button" onclick="step22Completed()"
+                                                                            id="view-button-for-allocation"
+                                                                                class="btn btn-dark dark-border w-100 has-border-radius ">
+                                                                                View Details
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>LP And Ex listing</td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <input type="text">
+
+                                                                        </td>
+                                                                        <td class="p-0"> <p
+                                                                            class="aqairchain-btn pl-3 pr-5 py-3 mb-0">Aqair
+                                                                            ID</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-gradient text-white  w-100 has-border-radius">
+                                                                                transfer
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-dark dark-border w-100 has-border-radius">
+                                                                                View Details
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>LP And Ex listing</td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <input type="text">
+
+                                                                        </td>
+                                                                        <td class="p-0"> <p
+                                                                            class="aqairchain-btn pl-3 pr-5 py-3 mb-0">Aqair
+                                                                            ID</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-gradient text-white  w-100 has-border-radius">
+                                                                                transfer
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-dark dark-border w-100 has-border-radius">
+                                                                                View Details
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>LP And Ex listing</td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <input type="text">
+
+                                                                        </td>
+                                                                        <td class="p-0"> <p
+                                                                            class="aqairchain-btn pl-3 pr-5 py-3 mb-0">Aqair
+                                                                            ID</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-gradient text-white  w-100 has-border-radius">
+                                                                                transfer
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-dark dark-border w-100 has-border-radius">
+                                                                                View Details
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>LP And Ex listing</td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <input type="text">
+
+                                                                        </td>
+                                                                        <td class="p-0"> <p
+                                                                            class="aqairchain-btn pl-3 pr-5 py-3 mb-0">Aqair
+                                                                            ID</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-gradient text-white  w-100 has-border-radius">
+                                                                                transfer
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-dark dark-border w-100 has-border-radius">
+                                                                                View Details
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>LP And Ex listing</td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <input type="text">
+
+                                                                        </td>
+                                                                        <td class="p-0"> <p
+                                                                            class="aqairchain-btn pl-3 pr-5 py-3 mb-0">Aqair
+                                                                            ID</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-gradient text-white  w-100 has-border-radius">
+                                                                                transfer
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-dark dark-border w-100 has-border-radius">
+                                                                                View Details
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>LP And Ex listing</td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <input type="text">
+
+                                                                        </td>
+                                                                        <td class="p-0"> <p
+                                                                            class="aqairchain-btn pl-3 pr-5 py-3 mb-0">Aqair
+                                                                            ID</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-gradient text-white  w-100 has-border-radius">
+                                                                                transfer
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-dark dark-border w-100 has-border-radius">
+                                                                                View Details
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>LP And Ex listing</td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <input type="text">
+
+                                                                        </td>
+                                                                        <td class="p-0"> <p
+                                                                            class="aqairchain-btn pl-3 pr-5 py-3 mb-0">Aqair
+                                                                            ID</p>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-gradient text-white   has-border-radius">
+                                                                                transfer
+                                                                            </button>
+                                                                        </td>
+                                                                        <td>3,100,000.00</td>
+                                                                        <td>
+                                                                            <button type="button"
+                                                                                id="transaction-button"
+                                                                                class="btn btn-dark dark-border  has-border-radius">
+                                                                                View Details
+                                                                            </button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr> 
+                                                                        <td colspan="3" class="font-weight-bold">100,000,000,00</td>
+                                                                        <td colspan="3" class="font-weight-bold">100,000,000,00</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-none" id="view-table" role="tabpanel"
+                                        aria-labelledby="view-button-tab">
+                                        <div
+                                            class="text-center text-lg-left py-lg-4 px-lg-5 p-3 has-box-shadow has-border-radius my-4 dashboard-dark-bg">
+                                            <div class="d-flex GoBack ">
+                                                <button class="goback-btn" onclick="step24Completed()">
+                                                <img src="/public/images/icon-go-back.png"></button>
+                                                <h5 class="text-white ml-1 mt-2 font-weight-bold">Go Back</h5>
+                                            </div>
+                                            <div class="dashboard-table-container table-responsive">
+                                                <table class="dashboard-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>User ID</th>
+                                                            <th>Date</th>
+                                                            <th>Transaction Amt</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>09/08/2021</td>
+                                                            <td>1,00,000,00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>09/08/2021</td>
+                                                            <td>2,00,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>17/08/2021</td>
+                                                            <td>1,00,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>20/06/2021</td>
+                                                            <td>4,00,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>09/06/2021</td>
+                                                            <td>7,00,00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <nav aria-label="..." class="py-3 ml-3">
+                                                <ul class="pagination">
+                                                    <li class="page-item disabled">
+                                                        <span class="page-link">Previous</span>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link"
+                                                            href="#">1</a></li>
+                                                    <li class="page-item active">
+                                                        <span class="page-link">
+                                                            2
+                                                            <span class="sr-only">(current)</span>
+                                                        </span>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link"
+                                                            href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">Next</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div> 
+                                    
+                                    <div class="d-none" id="view-table-for-allocation" role="tabpanel"
+                                    aria-labelledby="view-button-for-allication-tab">
+                                    <div
+                                        class="text-center text-lg-left py-lg-4 px-lg-5 p-3 has-box-shadow has-border-radius my-4 dashboard-dark-bg">
+                                        <div class="d-flex GoBack-allocation">
+                                            <button class="goback-btn" onclick="step25Completed()">  <img src="/public/images/icon-go-back.png"></button>
+                                         <h5 class="text-white ml-1 mt-2 font-weight-bold">Go Back</h5>
+                                        </div>
+                                        <div class="dashboard-table-container table-responsive">
+                                            <table class="dashboard-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>User ID</th>
+                                                        <th>Date</th>
+                                                        <th>Amount</th>
+                                                        <th>Transfer To</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>09/08/2021</td>
+                                                        <td>1,00,000,00</td>
+                                                        <td>0x4v283hs78jn29dyw</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>09/08/2021</td>
+                                                        <td>2,00,000</td>
+                                                        <td>0x4v283hs78jn29dyw</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>17/08/2021</td>
+                                                        <td>1,00,000</td>
+                                                        <td>0x4v283hs78jn29dyw</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>20/06/2021</td>
+                                                        <td>4,00,000</td>
+                                                        <td>0x4v283hs78jn29dyw</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>09/06/2021</td>
+                                                        <td>7,00,00</td>
+                                                        <td>0x4v283hs78jn29dyw</td>
+                                                    </tr>
+                                                  
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <nav aria-label="..." class="py-3 ml-3">
+                                            <ul class="pagination">
+                                                <li class="page-item disabled">
+                                                    <span class="page-link">Previous</span>
+                                                </li>
+                                                <li class="page-item"><a class="page-link"
+                                                        href="#">1</a></li>
+                                                <li class="page-item active">
+                                                    <span class="page-link">
+                                                        2
+                                                        <span class="sr-only">(current)</span>
+                                                    </span>
+                                                </li>
+                                                <li class="page-item"><a class="page-link"
+                                                        href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">Next</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div> 
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--Dashboard JS -->
+    <script src="/public/js/dashboard.js"></script>
+    <!--FEATHER ICONS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+</body>
+
+</html>

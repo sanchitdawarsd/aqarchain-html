@@ -1,0 +1,905 @@
+/******************************
+ *  LANDING PAGE THEME  *
+ ******************************/
+
+// REQUIRED IMPORTS
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// SETTING OVERRIDES
+@import "theme_includes/0_theme_settings";
+
+// LANDING PAGE STYLES
+
+.slant-div {
+    position: relative;
+    display: inline-block;
+    padding: 3px 50px 3px 50px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.slant-div:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FBB042;
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: skew(-45deg);
+    -ms-transform: skew(-45deg);
+    transform: skew(-45deg);
+    z-index: 1;
+}
+
+.sub-content 
+{
+    color: #707070;
+}
+
+.left-gradient-heading 
+{
+    position: relative;
+    padding: 10px 0px;
+    padding-left: 15px;
+
+
+    &:before
+    {
+        position: absolute;
+        content: " ";
+        background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+        width: 5px;
+        top: 4px;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+// LANDING PAGE HEADER
+
+#landing-page-header
+{
+    background: #1E282F;
+    background: url('/public/images/landing-page-header-bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    @include media-breakpoint-down(lg) 
+    {
+        background-size: 100% 65%;
+    }
+
+    @include media-breakpoint-between(xs, sm) 
+    {
+        background-size: auto;
+    }
+
+    .header-nav 
+    {
+        .nav-item {
+            position: relative;
+            
+            margin-right: 60px;
+            
+            .nav-link 
+            { 
+                color: #D1D0CE;
+                font-size: 18px;
+                padding-bottom: 15px;
+                margin-bottom: 0;
+
+                &:hover 
+                {
+                    color: white;
+                }
+            }
+
+            &:first-of-type  
+            {
+                margin-left: 60px;
+
+                @include media-breakpoint-down(md) 
+                {
+                    margin-left: 0;
+                }
+            }
+            
+            &:last-of-type  
+            {
+                margin-right: 0;
+            }
+
+            &.active, &:hover {
+
+              .nav-link 
+              {
+                 
+                color: white;
+                
+                &:after
+                {
+                    position: absolute;
+                    content: " ";
+                    background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+                    width: 15px;
+                    height: 3px;
+                    left: 40%;
+                    bottom: 0;
+                }
+              }
+            }
+        }
+        
+    }
+
+    .header-heading 
+    {
+        @include media-breakpoint-down(md) 
+        {
+            word-wrap:break-word;
+            white-space: normal;
+        }
+    }
+}
+
+//NEXT TOKEN SALE SECTION
+
+#landing-page-next-token-sale-section
+{
+    #landing-page-next-token-sale-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+
+        .card-wrapper
+        {
+            position: relative;
+        }
+  
+        .background-card 
+        {
+            position: absolute;
+            left: 10%;
+            height: 300px;
+            width: 80%;
+            margin: auto;
+            bottom: -50px;
+            z-index: 2;
+            background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+            border-radius: 47px;
+        }
+
+        .inner-card 
+        {
+            position: relative;
+            z-index: 3;
+            background-color: white;
+            box-shadow: 0px 23px 27px #0000002E;
+            border-radius: 47px;
+            margin-top: -60px;
+        }
+
+        .timer-card 
+        {
+            display: inline-block;
+            padding: 30px;
+            width: 160px;
+            height: 180px;
+            box-shadow: 0px 10px 20px #00000029;
+            border-radius: 7px;
+
+            @include media-breakpoint-only(lg) 
+            {
+                display: block;
+                width: auto;
+                padding: 30px 0px;
+            }
+
+            .time 
+            {
+                font-size: 50px;
+
+                @include media-breakpoint-down(lg) 
+                {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+//AQARCHAIN TOKEN SALE SECTION
+
+#landing-page-aqarchain-token-sale-section
+{
+    #landing-page-aqarchain-token-sale-section-container
+    {
+        padding: 60px 0; 
+        padding-bottom: 0;
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+    }
+}
+
+//WHAT IS AQARCHAIN SECTION
+
+#landing-page-what-is-aqarchain-section
+{
+    #landing-page-what-is-aqarchain-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+            padding-bottom: 160px;
+        }
+
+        .aqarchain-content 
+        {
+            font-size: 17px;
+        }
+    }
+}
+
+//FRACTIONAL OWNERSHIP SECTION
+
+#landing-page-fractional-ownership-section
+{
+    background-color: #1E282F;
+
+    #landing-page-fractional-ownership-section-container
+    {
+        padding: 60px 0; 
+        padding-bottom: 0;
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 20px 0 90px;
+            padding-bottom: 0;
+        }
+
+        .fractional-ownership-content 
+        {
+            color: #D1D0CE;
+            font-size: 17px;
+            padding-right: 100px;
+        }
+
+        .fractional-ownership-artwork 
+        {
+            width: 115%;
+            max-width: 115%;
+
+            @include media-breakpoint-down(md) 
+            {
+                max-width: 100%;
+                width: auto;
+            }
+        }
+    }
+}
+
+
+//ABOUT AQARCHAIN SECTION
+
+#landing-page-about-aqarchain-section
+{
+    background-image: url('/public/images/landing-page-about-aqarchain-background-top.svg'), url('/public/images/landing-page-about-aqarchain-background-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 0px right 100px, bottom -30px left;
+
+    @include media-breakpoint-only(md) {
+        background-size: 20%, 20% !important;
+    }
+
+    @include media-breakpoint-between(xs, sm) {
+        background-size: 35%, 35% !important;
+    }
+
+    #landing-page-about-aqarchain-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+            padding-bottom: 160px;
+        }
+    }
+}
+
+//DIFC SECTION
+
+#landing-page-difc-section
+{
+    background-color: #1E282F;
+
+    #landing-page-difc-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+
+        .difc-content 
+        {
+            color: #D1D0CE;
+            padding-right: 25px;
+        }
+
+        .difc-artwork 
+        {
+            margin-top: -270px;
+            margin-bottom: -80px;
+
+            @include media-breakpoint-down(md) 
+            {
+                margin-top: -40px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+//AQARCHAIN TOKEN ECOSYSTEM SECTION
+
+#landing-page-aqarchain-token-ecosystem-section
+{
+    background-image: url('/public/images/landing-page-aqarchain-token-ecosystem-section-bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom -20px right 110px;
+
+    @include media-breakpoint-down(md) 
+    {
+        background: none !important;
+    }
+
+    #landing-page-aqarchain-token-ecosystem-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+            padding-bottom: 130px;
+        }
+
+        .token-ecosystem-card {
+
+            position: relative;
+            border-radius: 8px;
+            min-height: 455px;
+
+            @include media-breakpoint-down(md) 
+            {
+                min-height: unset;
+            }
+
+            &:hover {
+
+                box-shadow: 0px 12px 24px #00000013;
+
+                &::after
+                {
+                    position: absolute;
+                    content: " ";
+                    background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+                    height: 7px;
+                    width: 100%;
+                    border-radius: 0px 0px 8px 8px;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                .icon-container 
+                {
+                    background-color: #1E282F;
+                }
+            }
+        
+            .icon-container 
+            {
+                display: inline-block;
+                padding: 18px;
+                border-radius: 8px;
+                box-shadow: 0px 12px 24px #00000013; 
+                
+                .icon 
+                {
+                    width: 50px !important;
+                }
+            }               
+
+        }
+
+    }
+
+}
+
+//AQARCHAIN USERS SECTION
+
+#landing-page-aqarchain-users-section
+{
+    background-image: url('/public/images/landing-page-aqarchain-user-section-bg.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 90%;
+
+    #landing-page-aqarchain-users-section-container
+    {
+        padding: 60px 0;
+        margin-top: 20px; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            margin-bottom: 190px;
+        }
+
+        .aqarchain-user-card 
+        {
+            padding: 22px;
+            background-color: white; 
+            box-shadow: 10px 10px 20px #00000029;
+            border-radius: 30px;
+            background-image: url('/public/images/landing-page-feature-section-card-bg.png');
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            margin-bottom: -200px;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 0;
+            }
+
+            .aqarchain-user-icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+//PLATFORM FEATURES SECTION
+
+#landing-page-platform-features-section
+{
+    #landing-page-platform-features-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+            padding-bottom: 160px;
+        }
+
+        .feature-card 
+        {
+            margin: 0px 20px;
+
+            .title-container 
+            {
+                border-radius: 14px;
+                padding: 15px;
+                box-shadow: 4px 4px 17px -4px rgba(0, 0, 0, 0.21);
+                border-left: 10px solid black;
+            }
+    
+            .content-container
+            {
+                border-radius: 14px;
+                padding: 30px 50px;
+                min-height: 250px;
+                box-shadow: 4px 4px 17px -4px rgba(0, 0, 0, 0.21);
+                background-color: white;
+                background-image: url('/public/images/landing-page-feature-section-card-bg.png');
+                background-position: bottom right;
+                background-repeat: no-repeat;
+            }
+
+            .feature-icon 
+            {
+                width: 40px;
+            }
+        }
+    }
+
+}
+
+
+//TECHNOLOGY SECTION
+
+#landing-page-technology-section
+{
+    background-image: url('/public/images/landing-page-technology-section-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    background-color: #1E282F;
+    border-radius: 150px 0px 0px 0px;
+
+    @include media-breakpoint-down(md) 
+    {
+        border-radius: 0px;
+    }
+
+    #landing-page-technology-section-container
+    {
+        padding: 60px 0; 
+        margin-bottom: 120px;
+
+        @include media-breakpoint-down(md) 
+        {
+            margin-bottom: 30px;
+        }
+
+        .technology-content 
+        {
+            color: #D1D0CE;
+        }
+
+        .tezos-artwork 
+        {
+            margin-bottom: -340px;
+
+            @include media-breakpoint-down(md) 
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
+//TEAM SECTION
+
+#landing-page-team-section
+{
+
+    #landing-page-team-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+            padding-bottom: 20px;
+        }
+
+        .team-card 
+        {
+            border-radius: 8;
+            border-radius: 24px;
+            box-shadow: none;
+            border: none;
+
+            &:hover 
+            {  
+                box-shadow: 10px 1px 99px #00000029;
+            }
+            .card-img-top 
+            {
+                max-width: 210px;
+                margin: auto;
+            }
+
+            .fa-linkedin-in 
+            {
+                color: #D1D0CE;
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+
+//ADVISORS SECTION
+
+#landing-page-advisors-section
+{
+
+    #landing-page-advisors-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+
+        .advisors-card 
+        {
+            border-radius: 8;
+            box-shadow: 10px 10px 20px #00000013;
+            border: none;
+
+            &:hover 
+            {  
+                box-shadow: 10px 10px 22px #00000018;
+            }
+
+            .fa-linkedin-in 
+            {
+                color: #D1D0CE;
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+//INVESTORS SECTION
+
+#landing-page-investors-section_1
+{
+    background-image: url('/public/images/landing-page-investors-section-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #1E282F;
+
+    #landing-page-investors-section_1-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+
+        .investor-card 
+        {
+            
+            position: relative;
+            border-radius: 8px;
+        
+            &:before
+            {
+                position: absolute;
+                content: " ";
+                background: transparent linear-gradient(180deg, #FBB042 0%, #FBB042 4%, #FDC010 39%, #FFDE11 100%) 0% 0% no-repeat padding-box;
+                width: 7px;
+                border-radius: 8px 0px 0px 8px;
+                top: 0px;
+                left: -1px;
+                bottom: 0;
+            }
+
+            .tezos-foundation-heading 
+            {
+                word-wrap:break-word;
+                white-space: normal;
+
+            }
+        }
+    }
+
+}
+
+#landing-page-investors-section_2
+{
+
+    #landing-page-investors-section_2-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+    }
+
+}
+
+
+//TOKENOMICS SECTION
+
+#landing-page-tokenomics-section
+{
+    background-color: #1E282F;
+
+    #landing-page-tokenomics-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+
+        .tokenomics-card 
+        {
+            background-color: rgba(255, 255, 255, 0.082);
+
+            .tokenomics-label 
+            {
+                color: rgba(255, 255, 255, 0.69);
+            }
+        }
+
+        .tokenomics-table 
+        {
+            .table 
+            {
+                background-color: rgba(255, 255, 255, 0.13);
+                border-bottom: 7px solid #8E7E3C;
+
+                tr, td, th 
+                {
+                    border-color: rgba(255, 255, 255, 0.09);
+                }
+
+                td 
+                {
+                    color: rgba(255, 255, 255, 0.69);
+                }
+            }
+        }
+    }
+
+}
+
+//ROAD MAP SECTION
+
+#landing-page-road-map-section
+{
+    #landing-page-road-map-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+    }
+
+}
+
+//PARTNER ASSOCIATES / IN THE NEWS SECTION
+
+#landing-page-partner-associate-news-section
+{
+    background-color: #1E282F;
+
+    #landing-page-partner-associate-news-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+
+        .company-group 
+        {
+            @include media-breakpoint-up(lg) 
+            {
+                padding: 60px;
+            }
+        }
+    }
+
+}
+
+//CONTACT US SECTION
+
+#landing-page-contact-us-section
+{
+    #landing-page-contact-us-section-container
+    {
+        padding: 60px 0; 
+
+        @include media-breakpoint-up(lg) 
+        {
+            padding: 120px 0 90px;
+        }
+
+        .contact-us-artwork 
+        {
+            @include media-breakpoint-down(md) 
+            {
+                padding: 0 !important;
+            }
+        }
+    }
+
+}
+
+// LANDING PAGE FOOTER
+
+.landing-page-footer
+{
+    background-color: #1E282F;
+    padding: 1.2rem;
+
+    .footer-nav {
+        
+        .nav-item {
+            
+            padding-right: 60px;
+            
+            .nav-link 
+            {
+                color: #b9b9b9;
+                margin-bottom: 0;
+
+                &:hover 
+                {
+                    color: white;
+                }
+            }
+            
+            &:last-of-type  
+            {
+                padding-right: 0;
+            }
+
+            @include media-breakpoint-down(md) {
+                padding-right: 0;
+                margin: 10px 0px;
+            }
+        }
+    }
+
+    .copyright-section 
+    {
+        border-top: 1px solid rgba(209, 208, 206, 0.144);
+
+        .copyright-text 
+        {
+            color: #b9b9b9;
+        }
+    }
+
+    .social-nav {
+
+        a 
+        {
+            border: 2px solid white;
+            padding: 15px 17px;
+            border-radius: 15px;
+
+            &.facebook {
+                padding: 15px 19px;
+            }
+
+            .fa-facebook-f 
+            {
+                font-size: 19px;
+            }
+
+            > * 
+            {
+                font-size: 16px;
+                color: white;
+            }
+
+            &:hover 
+            {
+                background-color: white;
+
+                > * 
+                {
+                    color: #1E282F;
+                }
+
+            }
+        }
+    }
+}

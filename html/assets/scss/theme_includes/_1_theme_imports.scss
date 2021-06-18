@@ -1,0 +1,142 @@
+/*********************
+IMPORT OWL CAROUSEL - START
+*********************/
+@import '../../../node_modules/owl.carousel/src/scss/owl.carousel.scss';
+@import '../../../node_modules/owl.carousel/src/scss/owl.theme.default.scss';
+
+.owl-carousel
+{
+	.owl-item
+	{
+		img
+		{
+			display: inline-block;
+			width: auto!important;
+		}
+	}
+}
+
+.owl-theme
+{
+	.owl-dots 
+	{
+        text-align: inherit;
+        
+		.owl-dot
+		{
+            outline: none;
+
+			span
+			{
+				height: 11px;
+				width: 11px;
+				background-color: rgba(#293138, 0.4);
+				border: none;
+				border-radius: 11px;
+				margin: 3px;
+				margin-bottom: 24px;
+				transition: 0.3s all;
+			}
+
+			&.active,
+			&:hover
+			{
+				span
+				{
+					background-color: #293138;
+				}
+            }
+            
+            &.active
+            {
+                span
+                {
+                    width: 44px;
+                }
+            }
+
+			&:not(:last-child)
+            {
+                margin-right: rem-calc(9);
+            }
+		}
+	}
+	
+	&.owl-dots-centered
+	{
+		.owl-dots
+		{
+			text-align: center;
+		}
+	}
+}
+
+@include media-breakpoint-down(lg){
+
+	.owl-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.owl-prev {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 40%;
+    margin-left: -45px !important;
+    display: block !important;
+
+	&:hover, &:focus {
+		background: transparent !important;
+		border: none;
+		outline: none;
+	}
+
+	img {
+	  width: 40px;
+      height: 40px;
+	}
+
+	@include media-breakpoint-down(lg){
+		position: unset !important;
+		display: inline-block!important;
+		margin: 0 10px!important;
+		top: unset;
+	}
+	
+}
+
+.owl-next {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 40%;
+    right: -45px !important;
+    display: block !important;
+
+	
+	&:hover, &:focus {
+		background: transparent !important;
+		border: none;
+		outline: none;
+	}
+
+	img {
+		width: 40px;
+		height: 40px;
+	}
+
+	@include media-breakpoint-down(lg){
+		position: unset !important;
+		display: inline-block!important;
+		top: unset;
+		margin: 0 10px!important;
+	}
+	
+}
+
+/*********************
+IMPORT OWL CAROUSEL - END
+*********************/

@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+   <!-- Theme CSS -->
+   <link rel="stylesheet" href="/public/css/theme.css">
+   <!-- Dashboard CSS -->
+   <link rel="stylesheet" href="/public/css/dashboard.css">
+   <!-- FONT AWESOME-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+   <!-- Favicon -->
+   <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+   <title>Dashboard | AqarX</title>
+</head>
+
+<body>
+   <main class="wrapper container-lg">
+      <!-- Sidebar -->
+      <nav id="sidebar" class="has-border-radius">
+         <ul class="nav nav-tabs nav-tabs dashboard-nav-tabs flex-column has-border-radius" id="dashboard-nav-tabs"
+            role="tablist">
+            <li class="nav-item text-center mb-3">
+               <a href="/"><img class="p-3" src="/public/images/logo.svg" style="height: 110px" title="Aqarchain"
+                     alt="Aqarchain" />
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link active" id="dashboard-nav-tab-dashboard-tab" data-toggle="tab"
+                  onclick="step13Completed()" href="#dashboard-nav-tab-dashboard" role="tab"
+                  aria-controls="dashboard-nav-tab-dashboard" aria-selected="true"><i class="mr-4"
+                     data-feather="grid"></i>Dashboard</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" id="dashboard-nav-tab-transactions-tab" data-toggle="tab" onclick="step15Completed()"
+                  href="#dashboard-nav-tab-transactions" role="tab" aria-controls="dashboard-nav-tab-transactions"
+                  aria-selected="false"><i class="mr-4" data-feather="book"></i>Transactions</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" id="dashboard-nav-tab-staking-tab" data-toggle="tab" onclick="step17Completed()"
+                  href="#dashboard-nav-tab-staking" role="tab" aria-controls="dashboard-nav-tab-staking"
+                  aria-selected="false"><i class="mr-4" data-feather="book"></i>Staking</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" id="dashboard-nav-tab-settings-tab" data-toggle="tab" onclick="step16Completed()"
+                  href="#dashboard-nav-tab-settings" role="tab" aria-controls="dashboard-nav-tab-settings"
+                  aria-selected="false"><i class="mr-4" data-feather="settings"></i>Settings</a>
+            </li>
+         </ul>
+         <ul class="nav nav-tabs dashboard-nav-tabs bottom-positioned has-border-radius flex-column">
+            <li class="nav-item text-center">
+               <img class="w-90" src="/public/images/icon-dashboard-sidebar-help.svg">
+            </li>
+            <li class="nav-item cursor-pointer">
+               <a class="nav-link" id="logout"><span class="mr-3" data-feather="log-out"></span>Log Out</a>
+            </li>
+         </ul>
+      </nav>
+
+      <!-- Page Content -->
+      <div id="content" class="flex-grow-1">
+         <div id="page-content" class="py-lg-5 pl-lg-5 p-md-2 p-3">
+            <div id="dashboard-header" class="mb-5">
+               <div id="dashboard-header-top"
+                  class="d-flex align-items-center justify-content-between has-box-shadow flex-lg-row flex-column px-2 py-2 has-border-radius">
+                  
+                  <div class="d-flex col-lg-4 col-md-4 col-12">
+
+                     <div class=" mr-2 mt-1 ">
+                        <img src="public/images/Avtar@3x.png" class="bg-gradient profile-pic">
+                     </div>
+                     <div class="user-section my-lg-0 my-3 ">
+                        <h4 class="font-weight-bold">Good Morning<span><img class="mx-2 "
+                                 src="/public/images/icon-dashboard-header-coffee.svg"></span></h4>
+                        <h5>Daniel Pearson!</h5>
+                     </div>
+                  </div>
+                     <div class="col-lg-3 col-md-5 col-3 d-flex btn btn-gradient-secondary  has-border-radius">
+                        <div class="mr-3 border-right">
+                           <img src="public/images/AQR@2x.png" class="mr-3">
+                        </div>
+                        <div class="aqrx-balance my-lg-0 my-3">
+                           <h6 class="font-weight-medium text-grey">AQR Balance </h6>
+                           <h4 class="font-weight-bold text-white">7,00,000</h4>
+                        </div>
+                     </div>
+
+                  <div class="col-lg-5 col-md-5 col-5 d-flex">
+                     <div class=" d-flex ml-4">
+                        <div class="language-select d-flex align-items-center my-lg-0 my-3">
+                           <img class="mr-2" src="public/images/icon-dashboard-language.svg">
+                           <h5 class="font-weight-medium mb-0">Eng<span class="ml-2" data-feather="chevron-down"></span>
+                           </h5>
+                        </div>
+                     </div>
+                     <div class="">
+                     <div class="d-flex btn btn-gradient has-border-radius ml-2 Wallet" data-toggle="modal"
+                        data-target="#walletModal">
+                        <img src="public/images/Buttone Wallet@3x.png" class="wallet-img">
+                        <h5 class="ml-2 font-weight-bold mt-2 connectToWallet">Connect To Wallet</h5>
+                     </div>
+                     </div>
+                  </div>
+                  </div>
+
+
+               </div>
+            </div>
+
+            <!-- START OF wallet MODAL -->
+            <div class="modal custom-modal fade" id="walletModal" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content ">
+                     <div class="d-flex  dashboard-dark-bg model-heading">
+                        <img src="/public/images/Pop Up Wallet@3x.png " class="ml-4 mt-3 mb-3 wallet-img">
+                        <h3 class="font-weight-bold text-white mt-4 mb-3 ml-3 ">Connect To Wallet</h3>
+                        <button type="button" class="modal-close-btn text-white  " data-dismiss="modal"
+                           aria-hidden="true">×</button>
+                     </div>
+                     <div class="modal-body p-4 text-center">
+                        <div class="d-flex">
+                           <div class="d-flex border has-border-radius p-2">
+                              <p class="mb-0">Metamask</p>
+                              <img src="/public/images/metamask@2x.png" class="popup-Metamask_img  mt-1">
+                           </div>
+                           <div class="d-flex border has-border-radius p-2 ml-3">
+                              <p class="mb-0">Binance Chain</p>
+                              <img src="/public/images/Binance Chain@2x.png" class="popup-Binance_img mt-1">
+                           </div>
+                        </div>
+                        <div class="d-flex mt-4 ">
+                           <div class="d-flex border has-border-radius p-2">
+                              <p class="mb-0">TrustWallet</p>
+                              <img src="/public/images/TrustWallet@2x.png" class="popup-TrustWallet_img  mt-1">
+                           </div>
+                           <div class="d-flex border has-border-radius p-2 ml-3">
+                              <p class="mb-0">TempleWallet</p>
+                              <img src="/public/images/TempleWallet@2x.png" class="popup-TempleWallet_img  mt-1">
+                           </div>
+                        </div>
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--END OF wallet MODAL-->
+
+            <div class="row no-gutters">
+               <div class="col-lg-12">
+                  <div class="tab-content dashboard-nav-tabs-content pl-3" id="dashboard-nav-tabs-content">
+                     <div class="tab-pane fade show active" id="dashboard-nav-tab-dashboard" role="tabpanel"
+                        aria-labelledby="dashboard-nav-tab-dashboard-tab">
+                        <div class="text-lg-left px-2 px-lg-4 has-box-shadow has-border-radius mb-5">
+                           <div class="row">
+                              <div class="col-lg-3 col-12 d-flex align-items-center">
+                                 <div
+                                    class="bg-light-blue d-flex flex-row align-items-center has-border-radius w-100 p-3">
+                                    <p class="mb-0 ml-4">Aqarid01xxxyyyzzzz</p>
+                                 </div>
+                              </div>
+                              <div class="col-lg-2  col-12 d-flex align-items-center ">
+                                 <div
+                                    class="bg-darkGray d-flex flex-row align-items-center has-border-radius w-100 p-3">
+                                    <p class="mb-0 ">DPAQAR001</p>
+                                 </div>
+                              </div>
+                              <div class="col-lg-4  col-12 d-flex align-items-center">
+                                 <div class="bg-light-blue d-flex flex-row align-items-center has-border-radius p-3">
+                                    <p class="mb-0">Share Referral Link via</p>
+                                    <a class="cursor-pointer"><img class="mx-2"
+                                          src="/public/images/icon-social-media-facebook.svg"></a>
+                                    <a class="cursor-pointer"><img class="mx-2"
+                                          src="/public/images/icon-social-media-whatsapp.svg"></a>
+                                    <a class="cursor-pointer"><img class="mx-2"
+                                          src="/public/images/icon-social-media-linkedin.svg"></a>
+                                 </div>
+
+                              </div>
+                              <div class="col-lg-3  col-12 text-lg-left text-center my-lg-0 my-3">
+                                 <img class="dashboard-referral-artwork"
+                                    src="/public/images/dashboard-referral-artwork.png">
+                              </div>
+
+                           </div>
+                        </div>
+                        <div class="text-lg-left p-4 p-lg-5 has-box-shadow has-border-radius dashboard-bg">
+                           <div class="heading-section my-3">
+                              <h2 class="font-weight-bold">Buy AQRX</h2>
+                              <img class="heading-border" src="/public/images/bg-border-yellow-gradient.svg">
+                           </div>
+                           <div class="row my-4">
+                              <div class="col-lg-5 col-12 my-lg-0 my-2">
+                                 <label class="input-label" for="purchase-amount-1">Enter the Amount you need to
+                                    purchase</label>
+                                 <div class="input-group">
+                                    <input type="text" class="form-control primary-input" id="purchase-amount-1"
+                                       placeholder="Enter a value">
+                                    <div class="input-group-append">
+                                       <select class="form-control dark-select-input curved-border">
+                                          <option>USDT</option>
+                                          <option>XTZ</option>
+                                          <option>BTC</option>
+                                          <option>ETH</option>
+                                          <option>BNB</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div
+                                 class="col-lg-1 col-12 my-lg-0 my-2 d-flex align-items-center justify-content-center">
+                                 <img class="text-center mt-5 mb-auto" src="public/images/icon-currency-exchange.svg">
+                              </div>
+                              <div class="col-lg-4 col-12 my-lg-0 my-2">
+                                 <label class="input-label" for="purchase-amount">Amount of AQRX you will get</label>
+                                 <div class="input-group">
+                                    <input type="text" class="form-control primary-input" id="purchase-amount"
+                                       placeholder="40">
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- <div class="row mt-5 mb-4">
+                              <div class="col-lg-5 col-12 my-lg-0 my-3">
+                                 <div class="card bg-dark p-4 has-border-radius">
+                                    <div
+                                       class="input-group input-group-sm bg-inherit white-dotted-border has-border-radius">
+                                       <input type="text" class="form-control text-white" placeholder="Loren Ipsum">
+                                       <div class="input-group-append">
+                                          <button class="btn btn-white curved-border">Apply</button>
+                                       </div>
+                                    </div>
+                                    <div class="transaction-charge-list mt-3">
+                                       <ul class="list-group">
+                                          <li
+                                             class="list-group-item bg-inherit d-flex align-items-center justify-content-between text-white pl-0">
+                                             <span>1 AQR</span>
+                                             <span>$0.15</span>
+                                          </li>
+                                          <li
+                                             class="list-group-item bg-inherit d-flex align-items-center justify-content-between text-white pl-0">
+                                             <span>Transaction Charges</span>
+                                             <span>$0.002</span>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div> -->
+                           <div class="row mt-5 mb-8">
+                              <div class="col-lg-3 col-md-6 col-12">
+                                 <button class="btn btn-white dark-border has-border-radius-5 w-100 "
+                                    id="dashboard-nav-tab-buynow-tab" onclick="step6Completed()">Buy Now </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="dashboard-nav-tab-buynow" role="tabpanel" class="d-none"
+                        aria-labelledby="dashboard-nav-tab-buynow-tab">
+                        <div
+                           class="text-center text-lg-left p-4 p-lg-5 has-box-shadow has-border-radius dashboard-transaction-bg">
+                           <div class="heading-section my-3">
+                              <div class="d-flex">
+                                 <img class="icon-30" src="/public/images/icon-go-back.png">
+                                 <h2 class="font-weight-bold ml-3">Go-Back</h2>
+                              </div>
+                              <img class="heading-border" src="/public/images/bg-border-yellow-gradient.svg">
+                           </div>
+
+                           <h3 class=" text-muted my-4">Select Crypto Currency</h3>
+                           <div>
+
+                              <div class="row no-gutters ">
+                                 <div class="col-lg-2 col-md-4 col-12 dashboard-buynowbtn-nav-tabs-wrapper">
+
+                                    <ul class="nav nav-tabs nav-tabs dashboard-buynowbtn-nav-tabs flex-column "
+                                       id="dashboard-buynowbtn-nav-tabs" role="tablist">
+                                       <li class="nav-item">
+                                          <a class="nav-link active " id="dashboard-buynowbtn-nav-tab-usdt-tab"
+                                             data-toggle="tab" href="#dashboard-buynowbtn-nav-tab-usdt" role="tab"
+                                             aria-controls="dashboard-buynowbtn-nav-tab-usdt" aria-selected="true">
+
+                                             <img class="icon-30" src="/public/images/icon-cryptocurrency-usdt.svg">
+                                             <h4 class="mt-3">USDT</h4>
+                                          </a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" id="dashboard-buynowbtn-nav-tab-xtz-tab" data-toggle="tab"
+                                             href="#dashboard-buynowbtn-nav-tab-xtz" role="tab"
+                                             aria-controls="dashboard-buynowbtn-nav-tab-xtz" aria-selected="false">
+                                             <img class="icon-30" src="/public/images/icon-cryptocurrency-xtz.svg">
+                                             <h4 class="mt-3">XTZ</h4>
+                                          </a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" id="dashboard-buynowbtn-nav-tab-btc-tab" data-toggle="tab"
+                                             href="#dashboard-buynowbtn-nav-tab-btc" role="tab"
+                                             aria-controls="dashboard-buynowbtn-nav-tab-btc" aria-selected="false">
+                                             <img class="icon-30" src="/public/images/icon-cryptocurrency-btc.svg">
+                                             <h4 class="mt-3">BTC</h4>
+                                          </a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" id="dashboard-buynowbtn-nav-tab-eth-tab" data-toggle="tab"
+                                             href="#dashboard-buynowbtn-nav-tab-eth" role="tab"
+                                             aria-controls="dashboard-buynowbtn-nav-tab-eth" aria-selected="false">
+                                             <img class="icon-30" src="/public/images/icon-cryptocurrency-ETH.svg">
+                                             <h4 class="mt-3">ETH</h4>
+                                          </a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" id="dashboard-buynowbtn-nav-tab-bnb-tab" data-toggle="tab"
+                                             href="#dashboard-buynowbtn-nav-tab-bnb" role="tab"
+                                             aria-controls="dashboard-buynowbtn-nav-tab-bnb" aria-selected="false">
+                                             <img class="icon-30" src="/public/images/icon-cryptocurrency-BNB.svg">
+                                             <h4 class="mt-3">BNB</h4>
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col-lg-10 col-md-8 col-12 d-none"
+                                    id="dashboard-buynowbtn-nav-tabs-content">
+                                    <div class=" dashboard-buynowbtn-nav-tabs-content ml-3 mt-4">
+                                       <div class="tab-pane fade show " id="dashboard-buynowbtn-nav-tab-usdt"
+                                          role="tabpanel" aria-labelledby="dashboard-buynowbtn-nav-tab-usdt-tab">
+                                          <div class="col-lg-12 col-md-12 col-12 mb-4">
+                                             <div class="row">
+                                                <div class="col-lg-6 col-6 d-flex">
+                                                   <div class="col-lg-6">
+                                                      <h4 class="mt-3 text-muted">Amount Transferred</h4>
+                                                      <div class="col-lg-12 amount-details mt-3">
+                                                         <h5 class="text-dark mt-2">AMOUNT</h5>
+                                                         <h5 class="text-dark">40</h5>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-6 ">
+                                                      <h4 class="mt-3 text-muted">Network fee</h4>
+                                                      <div class="col-lg-12 amount-details-right mt-3">
+                                                         <h5 class="text-dark mt-2"> Amount</h5>
+                                                         <h5 class="text-dark">0.30</h5>
+                                                      </div>
+                                                   </div>
+                                                </div>
+
+                                                <div class="col-lg-12 col-6 d-flex border-top my-3">
+                                                   <div class="col-lg-6">
+                                                      <h4 class="mt-3 text-muted">From Address</h4>
+                                                      <div class="col-lg-12 amount-details-right mt-3">
+                                                         <h5 class="text-dark mt-2">Wallet address</h5>
+                                                         <h5 class="text-dark">add here..</h5>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-6">
+                                                      <h4 class="mt-3 text-muted">To Address</h4>
+                                                      <div class="col-lg-12 amount-details mt-3">
+                                                         <h5 class="text-dark mt-2"> Wallet address</h5>
+                                                         <h5 class="text-dark">
+                                                            0xe4389a2da09a1af7138d00354081dd65cb632461</h5>
+                                                      </div>
+                                                   </div>
+                                                </div>
+
+                                                <div class="col-lg-12 col-6 d-flex border-top mt-1">
+                                                   <div class="col-lg-2 mt-2">
+                                                      <div class="qr-code-card pb-2 mt-2">
+                                                         <img class="card-imp-top img-fluid"
+                                                            src="/public/images/dashboard-qr-code-image.png">
+                                                         <div class="copy-qr-code">
+                                                            <img class="mr-2" src="/public/images/icon-copy.svg"><span
+                                                               class="text-grey">Copy</span>
+                                                         </div>
+
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-7 mt-2">
+                                                      <div class="col-lg-12 mt-2">
+                                                         <p class="amount-Transaction-details p-1">
+                                                            Crypto Payments take time for verification as minimum blocks
+                                                            needs to be confirmed for a transaction to be approved
+                                                            Please allow <b>6 to 12 hours </b> for our team to verify
+                                                            the
+                                                            transaction and deposit the AQRX token in your account.
+                                                         </p>
+                                                         <div class="col-lg-12 amount-details-right mt-3">
+                                                            <h5 class="text-dark mt-2">Transaction id</h5>
+                                                            <h6 class="text-dark transaction-id font-12">
+                                                               0x97b557aa0af469310c6e6e4bbe960d556d1a2129352edf4f707987987
+                                                            </h6>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-3 mt-auto ">
+                                                      <button
+                                                         class="btn btn-white dark-border has-border-radius-5 w-100 "
+                                                         onclick="step7Completed()">
+                                                         Next </button>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+
+                                 <div class="col-lg-10 col-md-8 col-12 d-none"
+                                    id="dashboard-buynowbtn-nav-tab-usdt-next-tab">
+                                    <div class=" dashboard-buynowbtn-nav-tabs-content ml-3 mt-4"
+                                       id="dashboard-buynowbtn-nav-tab-usdt-next-tab">
+                                       <div class="tab-pane fade show justify-content-center my-5 pb-2">
+                                          <div class="background-bg-for-token text-center">
+                                             <img class="img-fluid w-90 cursor-pointer"
+                                                src="/public/images/dashboard-successful-aqarx-token-purchase-banner.svg"
+                                                onclick="step8Completed()">
+                                          </div>
+                                          <div class="d-flex my-4">
+                                             <div
+                                                class="d-flex flex-row align-items-center has-border-radius justify-content-center w-100 p-2">
+                                                <div
+                                                   class="input-group bg-light-blue input-group has-border-radius w-75">
+                                                   <input type="text" class="form-control border-none"
+                                                      value="I have Purchased the AQRXToken #MYAQRX">
+                                                   <div class="input-group-append">
+                                                      <button
+                                                         class="btn btn-gradient-secondary text-white curved-border"><span
+                                                            class="mr-2" data-feather="share-2"></span></button>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="text-center">
+                                             <p class="share-text-box p-3">
+                                                Share this on social media and stand<br>
+                                                chance to enter a mega raffle draw
+                                                that <br> takes place at the end of Token <br>
+                                                sale.
+                                             </p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div class="col-lg-10 col-md-8 col-12 d-none mt-4 "
+                                    id="dashboard-buynowbtn-nav-tab-usdt-retry-tab">
+                                    <div class="ml-3 p-5 dashboard-buynowbtn-nav-tabs-content w-100"
+                                       id="dashboard-buynowbtn-nav-tab-usdt-retry-tab">
+                                       <div class="tab-pane fade show justify-content-center my-5">
+                                          <div class="background-bg-for-danger text-center">
+                                             <img class="img-fluid w-90"
+                                                src="/public/images/dashboard-failure-aqarx-token-purchase-banner.svg">
+                                          </div>
+                                          <div class="row mb-5">
+                                             <div class="offset-lg-3 col-lg-8 d-flex mb-4 ">
+                                                <div class="col-lg-4 ml-3">
+                                                   <button type="button" id="update-button"
+                                                      class="btn btn-dark dark-border w-100 has-border-radius my-4">Try
+                                                      Again</button>
+                                                </div>
+                                                <div class="col-lg-4 ml-3">
+                                                   <button type="button" id="cancel-button"
+                                                      class="btn btn-white dark-border w-100 has-border-radius my-4"
+                                                      onclick="step9Completed()">Cancel</button>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade d-none" id="dashboard-nav-tab-transactions" role="tabpanel"
+                        aria-labelledby="dashboard-nav-tab-transactions-tab">
+                        <div
+                           class="text-center text-lg-left py-lg-4 px-lg-5 p-3 has-box-shadow has-border-radius my-4 dashboard-dark-bg">
+                           <div class="dashboard-table-container table-responsive">
+                              <table class="dashboard-table">
+                                 <thead>
+                                    <tr>
+                                       <th>#</th>
+                                       <th>Date</th>
+                                       <th>Buying Currency</th>
+                                       <th>Transaction ID</th>
+                                       <th>AQRX</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>1</td>
+                                       <td>09/08/2021</td>
+                                       <td class="text-middle">
+                                          <img class="icon-30 " src="/public/images/icon-cryptocurrency-btc.svg">
+                                          Bitcoin
+                                       </td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                    <tr>
+                                       <td>2</td>
+                                       <td>09/08/2021</td>
+                                       <td class="text-middle">
+                                          <img class="icon-30 ml-3" src="/public/images/icon-cryptocurrency-ETH.svg">
+                                          Ethereum
+                                       </td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                    <tr>
+                                       <td>3</td>
+                                       <td>09/08/2021</td>
+                                       <td class="text-middle usdt">
+                                          <img class="icon-30" src="/public/images/icon-cryptocurrency-xtz.svg">
+                                          USDT
+                                       </td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                    <tr>
+                                       <td>4</td>
+                                       <td>09/08/2021</td>
+                                       <td>BONUS</td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                    <tr>
+                                       <td>5</td>
+                                       <td>09/08/2021</td>
+                                       <td>Bitcoin</td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                    <tr>
+                                       <td>6</td>
+                                       <td>09/08/2021</td>
+                                       <td>Bitcoin</td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                    <tr>
+                                       <td>7</td>
+                                       <td>09/08/2021</td>
+                                       <td>Bitcoin</td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                    <tr>
+                                       <td>8</td>
+                                       <td>09/08/2021</td>
+                                       <td>Bitcoin</td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                    <tr>
+                                       <td>9</td>
+                                       <td>09/08/2021</td>
+                                       <td>Bitcoin</td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                    <tr>
+                                       <td>10</td>
+                                       <td>09/08/2021</td>
+                                       <td>Bitcoin</td>
+                                       <td>0x472SNF37EFSA4765FS66a5858</td>
+                                       <td>400</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade d-none" id="dashboard-nav-tab-staking" role="tabpanel"
+                        aria-labelledby="dashboard-nav-tab-staking-tab">
+                        <div
+                           class="text-center text-lg-left py-lg-4 px-lg-5 p-5  has-box-shadow has-border-radius my-4 ">
+                           <div class="container-lg py-5">
+                              <div>
+                                 <h1 class="text-center">Coming Soon...</h1>
+                                 <div class="d-flex justify-content-center mt-2 pb-5">
+                                    <img src="/public/images/Coming Soon....@2x.png">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade d-none" id="dashboard-nav-tab-settings" role="tabpanel"
+                        aria-labelledby="dashboard-nav-tab-settings-tab">
+                        <div
+                           class="text-center text-lg-left p-4 p-lg-5 has-box-shadow has-border-radius dashboard-dark-bg">
+                           <div class="dashboard-settings-card has-border-radius">
+                              <div class="row no-gutters min-height-lg">
+                                 <div class="col-lg-3 col-md-4 col-12 dashboard-settings-nav-tabs-wrapper">
+                                    <ul class="nav nav-tabs nav-tabs dashboard-settings-nav-tabs flex-column has-border-radius"
+                                       id="dashboard-settings-nav-tabs" role="tablist">
+                                       <li class="nav-item">
+                                          <a class="nav-link active" onclick="step10Completed()"
+                                             id="dashboard-settings-nav-tab-wallet-address-tab" data-toggle="tab"
+                                             href="#dashboard-settings-nav-tab-wallet-address" role="tab"
+                                             aria-controls="dashboard-settings-nav-tab-wallet-address"
+                                             aria-selected="true"><span class="mr-3"
+                                                data-feather="briefcase"></span>Wallet Address</a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" id="dashboard-settings-nav-tab-kyc-tab"
+                                             onclick="step11Completed()" data-toggle="tab"
+                                             href="#dashboard-settings-nav-tab-kyc" role="tab"
+                                             aria-controls="dashboard-settings-nav-tab-kyc" aria-selected="false"><span
+                                                class="mr-3" data-feather="lock"></span>KYC</a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" id="dashboard-settings-nav-tab-security-tab"
+                                             onclick="step12Completed()" data-toggle="tab"
+                                             href="#dashboard-settings-nav-tab-security" role="tab"
+                                             aria-controls="dashboard-settings-nav-tab-security"
+                                             aria-selected="false"><span class="mr-3"
+                                                data-feather="user"></span>Security & Details</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="col-lg-9 col-md-8 col-12">
+                                    <div class="tab-content dashboard-settings-nav-tabs-content"
+                                       id="dashboard-settings-nav-tabs-content">
+                                       <div class="tab-pane fade show active"
+                                          id="dashboard-settings-nav-tab-wallet-address" role="tabpanel"
+                                          aria-labelledby="dashboard-settings-nav-tab-wallet-address-tab">
+                                          <div class="dashboard-settings-header">
+                                             <h2 class="font-weight-bold mb-0">My Wallet Address</h2>
+                                          </div>
+                                          <div class="dashboard-settings-body p-5">
+                                             <div class="d-flex">
+                                                <div
+                                                   class="bg-light-blue d-flex flex-row align-items-center has-border-radius w-100 p-2">
+                                                   <div
+                                                      class="input-group input-group-sm bg-inherit dark-dotted-border has-border-radius">
+                                                      <div class="input-group-prepend mr-1 mt-2">
+                                                         <span class="input-group-image">
+                                                            <img class="icon-30"
+                                                               src="/public/images/icon-cryptocurrency-ETH.svg">
+                                                         </span>
+                                                      </div>
+                                                      <input type="text" class="form-control border-none"
+                                                         value="ETH/BSC">
+                                                   </div>
+                                                </div>
+                                                <div class="ml-2 mt-1">
+                                                   <button class="btn btn-gradient text-white"
+                                                      onclick="step27Completed()">
+                                                      Save</button>
+                                                </div>
+                                                <div id="checkmark1" class="d-none">
+                                                   <div class="check"></div>
+                                                </div>
+                                             </div>
+
+
+                                             <div class="d-flex mt-3">
+                                                <div
+                                                   class="bg-light-blue d-flex flex-row align-items-center has-border-radius w-100 p-2">
+                                                   <div
+                                                      class="input-group input-group-sm bg-inherit dark-dotted-border has-border-radius">
+                                                      <div class="input-group-prepend mr-1 mt-2">
+                                                         <span class="input-group-image">
+                                                            <img class="icon-30"
+                                                               src="/public/images/icon-cryptocurrency-xtz.svg">
+                                                         </span>
+                                                      </div>
+                                                      <input type="text" class="form-control border-none" value="XTZ">
+                                                   </div>
+                                                </div>
+                                                <div class="ml-2 mt-1">
+                                                   <button class="btn btn-gradient text-white"
+                                                      onclick="step26Completed()">
+                                                      Save</button>
+                                                </div>
+                                                <div id="checkmark" class="d-none">
+                                                   <div class="check"></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="tab-pane fade" id="dashboard-settings-nav-tab-kyc" role="tabpanel"
+                                          aria-labelledby="dashboard-settings-nav-tab-kyc-tab">
+                                          <div class="dashboard-settings-header">
+                                             <h2 class="font-weight-bold mb-0">KYC Details</h2>
+                                          </div>
+                                       </div>
+                                       <div class="tab-pane fade" id="dashboard-settings-nav-tab-security"
+                                          role="tabpanel" aria-labelledby="dashboard-settings-nav-tab-security-tab">
+                                          <div class="dashboard-settings-header">
+                                             <h2 class="font-weight-bold mb-0">Update Email and Password</h2>
+                                          </div>
+                                          <form>
+                                             <div class="col-lg-12">
+                                                <div class="form-group col-lg-8 mt-3">
+                                                   <label class="input-label font-weight-bold">Email Address</label>
+                                                   <div class="d-flex">
+                                                      <div class="input-group secondary-input-group">
+                                                         <input type="email" class="form-control" id="email-2"
+                                                            placeholder="johndoe@gmail.com" disabled>
+                                                         <div class="input-group-append">
+                                                            <div class="input-icon-wrapper">
+                                                               <i class="input-icon" data-feather="mail"></i>
+                                                            </div>
+
+                                                         </div>
+                                                      </div>
+                                                      <div class="d-flex mt-3 ml-3" onclick="step1Completed()">
+                                                         <label class="input-label font-weight-bold">Change</label>
+                                                         <div class="input-icon-wrapper ml-2">
+                                                            <i class="input-icon text-grey" data-feather="edit"></i>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+
+                                                </div>
+                                                <div class="form-group col-lg-8 mt-3">
+                                                   <label class="input-label font-weight-bold"> Password</label>
+                                                   <div class="d-flex">
+                                                      <div class="input-group secondary-input-group">
+                                                         <input type="password" class="form-control" id="password-2"
+                                                            placeholder="*********" disabled>
+                                                         <div class="input-group-append">
+                                                            <div class="input-icon-wrapper">
+                                                               <i class="input-icon" data-feather="eye"></i>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                      <div class="d-flex mt-3 ml-3" onclick="step5Completed()">
+                                                         <label class="input-label font-weight-bold">Change</label>
+                                                         <div class="input-icon-wrapper ml-2">
+                                                            <i class="input-icon text-grey" data-feather="edit"></i>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-lg-12 px-4 pt-3 border-top">
+                                                <h3 class="font-weight-bold my-3">Update Details</h3>
+                                                <div class="row">
+                                                   <div class="col-lg-6 col-12 my-3">
+                                                      <label class="input-label font-weight-bold">First Name</label>
+                                                      <div class="input-group secondary-input-group">
+                                                         <input type="text" class="form-control " id="first-name"
+                                                            placeholder="Enter First Name">
+                                                         <div class="input-group-append">
+                                                            <div class="input-icon-wrapper">
+                                                               <i class="input-icon" data-feather="user"></i>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-6 col-12 my-3">
+                                                      <label class="input-label font-weight-bold">Last Name</label>
+                                                      <div class="input-group secondary-input-group">
+                                                         <input type="text" class="form-control " id="last-name"
+                                                            placeholder="Enter Last Name">
+                                                         <div class="input-group-append">
+                                                            <div class="input-icon-wrapper">
+                                                               <i class="input-icon" data-feather="user"></i>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-6 col-12 my-3">
+                                                      <label class="input-label font-weight-bold">Date of
+                                                         Birth</label>
+                                                      <div class="input-group secondary-input-group">
+                                                         <input type="text" class="form-control" id="calender"
+                                                            placeholder="Enter DOB">
+                                                         <div class="input-group-append">
+                                                            <div class="input-icon-wrapper">
+                                                               <i class="input-icon" data-feather="calendar"></i>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-6 col-12 my-3">
+                                                      <label class="input-label font-weight-bold">Country of
+                                                         Residence</label>
+                                                      <div class="input-group secondary-input-group">
+                                                         <input type="text" class="form-control"
+                                                            id="country-of-residence" placeholder="Enter Country">
+                                                         <div class="input-group-append">
+                                                            <div class="input-icon-wrapper">
+                                                               <i class="input-icon" data-feather="chevron-down"></i>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-6 col-12 my-3">
+                                                      <label class="input-label font-weight-bold">ID Number</label>
+                                                      <div class="input-group secondary-input-group">
+                                                         <input type="text" class="form-control " id="id-no"
+                                                            placeholder="Enter ID Number">
+                                                         <div class="input-group-append">
+                                                            <div class="input-icon-wrapper">
+                                                               <i class="input-icon" data-feather="eye"></i>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-6 col-12 my-3">
+                                                      <label class="input-label font-weight-bold">Nationality</label>
+                                                      <div class="input-group secondary-input-group">
+                                                         <input type="text" class="form-control " id="nationality"
+                                                            placeholder="Enter Nationality">
+                                                         <div class="input-group-append">
+                                                            <div class="input-icon-wrapper">
+                                                               <i class="input-icon" data-feather="chevron-down"></i>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="col-lg-6 my-3">
+                                                      <label class="input-label font-weight-bold">Passport
+                                                         Number</label>
+                                                      <div class="input-group secondary-input-group">
+                                                         <input type="text" class="form-control " id="passport-no"
+                                                            placeholder="Enter Passport Number">
+                                                         <div class="input-group-append">
+                                                            <div class="input-icon-wrapper">
+                                                               <i class="input-icon" data-feather="eye"></i>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+
+                                                </div>
+                                                <div class="row">
+                                                   <div class="col-lg-4">
+                                                      <button type="button" id="update-button"
+                                                         class="btn btn-dark dark-border w-100 has-border-radius my-4">Update</button>
+                                                   </div>
+                                                   <div class="col-lg-4">
+                                                      <button type="button" id="cancel-button"
+                                                         class="btn btn-white dark-border w-100 has-border-radius my-4">Cancel</button>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </form>
+                                       </div>
+
+
+                                       <div id="dashboard-settings-nav-tab-security-change-email" class="d-none"
+                                          role="tabpanel" aria-labelledby="dashboard-settings-nav-tab-email-tab">
+                                          <div class="dashboard-settings-header">
+                                             <h2 class="font-weight-bold mb-0">Update Email and Password</h2>
+                                          </div>
+                                          <div class="container-lg"
+                                             id="dashboard-settings-nav-tab-security-change-email-container">
+                                             <div class="row no-gutters">
+                                                <div class="col-lg-12 col-md-12 col-12 ">
+                                                   <div class="row no-gutters">
+                                                      <div class=" col-lg-12 p-4">
+                                                         <div class=" col-lg-8 form-heading mb-2">
+                                                            <div class="d-flex">
+                                                               <img class="icon-30"
+                                                                  src="/public/images/icon-go-back.png">
+                                                               <h2 class="font-weight-bold ml-3">Go-Back</h2>
+                                                            </div>
+                                                            <h3 class="font-weight-bold text-dark my-4">Change your
+                                                               email address</h3>
+                                                            <h4 class="text-dark my-2">Current email address: <br>
+                                                               jhonedoe@getnada.com</h4>
+                                                            <p class="mt-3">Enter the new email address you would
+                                                               like to associate with your account below.
+                                                               We will send a One Time Password (OTP)
+                                                               to that address.
+                                                            </p>
+                                                         </div>
+                                                         <form>
+                                                            <div class="form-group col-lg-7">
+                                                               <div class="d-flex">
+                                                                  <div class="input-group secondary-input-group">
+                                                                     <input type="email" class="form-control"
+                                                                        id="email-3"
+                                                                        placeholder="Enter your email address">
+                                                                     <div class="input-group-append">
+                                                                        <div class="input-icon-wrapper">
+                                                                           <i class="input-icon"
+                                                                              data-feather="mail"></i>
+                                                                        </div>
+
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+
+                                                            <div class="col-lg-7">
+                                                               <button type="button" id="send-otp-button"
+                                                                  class="btn btn-gradient-secondary has-border-radius-5 w-100 my-4"
+                                                                  onclick="step2Completed()">Send OTP</button>
+                                                            </div>
+                                                         </form>
+                                                      </div>
+                                                   </div>
+
+                                                </div>
+
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div id="dashboard-settings-nav-tab-security-reset-otp" class="d-none"
+                                          role="tabpanel" aria-labelledby="dashboard-settings-nav-tab-reset-otp-tab">
+                                          <div class="dashboard-settings-header">
+                                             <h2 class="font-weight-bold mb-0">Update Email and Password</h2>
+                                          </div>
+                                          <div class="container-lg"
+                                             id="dashboard-settings-nav-tab-security-change-email-container">
+                                             <div class="row no-gutters">
+                                                <div class="col-lg-12 col-md-12 col-12 ">
+                                                   <div class="row no-gutters">
+                                                      <div class=" col-lg-12 p-4">
+                                                         <div class=" col-lg-8 form-heading mb-2">
+                                                            <div class="d-flex">
+                                                               <img class="icon-30"
+                                                                  src="/public/images/icon-go-back.png">
+                                                               <h2 class="font-weight-bold ml-3">Go-Back</h2>
+                                                            </div>
+                                                            <h3 class="font-weight-bold text-dark my-5">Change your
+                                                               email address</h3>
+                                                            <h4 class="text-muted">OTP is sent to:</h4>
+                                                            <h3 class="font-weight-bold text-dark">johndoe@gmail.com
+                                                            </h3>
+                                                            <form class="my-4">
+                                                               <div class="row">
+                                                                  <div class="col-lg-9 col-12">
+                                                                     <div class="form-group my-2">
+                                                                        <div id="otp-outer-wrapper">
+                                                                           <div id="otp-inner-wrapper">
+                                                                              <input id="partitioned-otp" type="text"
+                                                                                 maxlength="4"
+                                                                                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                                                                 onKeyPress="if(this.value.length==4) return false;" />
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                     <p
+                                                                        class="form-text text-muted text-left mt-4 mb-0">
+                                                                        Didn't receive OTP? <span
+                                                                           class="font-weight-bold text-dark">Resend
+                                                                           OTP</span><span></span></p>
+                                                                  </div>
+                                                               </div>
+                                                            </form>
+                                                         </div>
+                                                         <div class="col-lg-9">
+                                                            <button id="verify-otp-button"
+                                                               class="btn btn-gradient-secondary has-border-radius-5 w-75 my-3"
+                                                               onclick="step3Completed()">Verify OTP</button>
+                                                         </div>
+
+                                                      </div>
+                                                   </div>
+
+                                                </div>
+
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div id="dashboard-settings-nav-tab-security-updated" class="d-none"
+                                          role="tabpanel" aria-labelledby="dashboard-settings-nav-tab-updated-tab">
+                                          <div class="dashboard-settings-header">
+                                             <h2 class="font-weight-bold mb-0">Update Email and Password</h2>
+                                          </div>
+                                          <div class="container-lg"
+                                             id="dashboard-settings-nav-tab-security-change-email-container">
+                                             <div class="row no-gutters">
+                                                <div class="col-lg-12 col-md-12 col-12 ">
+                                                   <div class="row no-gutters">
+                                                      <div class=" col-lg-12 p-4">
+                                                         <div class=" col-lg-8 form-heading mb-2">
+                                                            <div class="d-flex">
+                                                               <img class="icon-30"
+                                                                  src="/public/images/icon-go-back.png">
+                                                               <h2 class="font-weight-bold ml-3">Go-Back</h2>
+                                                            </div>
+                                                            <div class="">
+                                                               <img class="confirmation-check-image mt-5 mb-4"
+                                                                  src="public/images/icon-check-mark.svg">
+                                                               <h2 class="font-weight-bold mb-3">Congratulations</h2>
+                                                               <h4 class="font-weight-medium text-muted mb-0">Your
+                                                                  email
+                                                                  address is verified</h4>
+                                                               <h4 class="font-weight-medium text-muted mb-0">
+                                                                  successfully!</h4>
+                                                            </div>
+                                                         </div>
+                                                         <div class="col-lg-9">
+                                                            <button id="verify-otp-button"
+                                                               class="btn btn-gradient-secondary has-border-radius-5 w-75 my-3"
+                                                               onclick="step4Completed()">Thanks</button>
+                                                         </div>
+
+                                                      </div>
+                                                   </div>
+
+                                                </div>
+
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div id="dashboard-settings-nav-tab-security-change-password" class="d-none"
+                                          role="tabpanel" aria-labelledby="dashboard-settings-nav-tab-password-tab">
+                                          <div class="dashboard-settings-header">
+                                             <h2 class="font-weight-bold mb-0">Update Email and Password</h2>
+                                          </div>
+                                          <div class="container-lg"
+                                             id="dashboard-settings-nav-tab-security-change-email-container">
+                                             <div class="row no-gutters">
+                                                <div class="col-lg-12 col-md-12 col-12 ">
+                                                   <div class="row no-gutters">
+                                                      <div class=" col-lg-12 p-4">
+                                                         <div class=" col-lg-8 form-heading mb-2">
+                                                            <div class="d-flex align-items-center">
+                                                               <img class="icon-30"
+                                                                  src="/public/images/icon-go-back.png">
+                                                               <h2 class="font-weight-bold ml-3 mb-0">Go-Back</h2>
+                                                            </div>
+                                                            <h3 class="font-weight-bold text-dark mt-5 mb-4 ml-3">Change
+                                                               your
+                                                               Password</h3>
+
+                                                            <div class="col-lg-12 my-3">
+                                                               <div class="input-group secondary-input-group">
+                                                                  <input type="text" class="form-control "
+                                                                     id="password-old" placeholder="Enter old password">
+                                                                  <div class="input-group-append">
+                                                                     <div class="input-icon-wrapper">
+                                                                        <i class="input-icon"
+                                                                           data-feather="eye-off"></i>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+
+                                                            <div class="col-lg-12 my-3">
+                                                               <div class="input-group secondary-input-group">
+                                                                  <input type="text" class="form-control "
+                                                                     id="password-new" placeholder="Enter New password">
+                                                                  <div class="input-group-append">
+                                                                     <div class="input-icon-wrapper">
+                                                                        <i class="input-icon" data-feather="eye"></i>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+
+                                                            <div class="col-lg-12 my-3">
+                                                               <div class="input-group secondary-input-group">
+                                                                  <input type="text" class="form-control "
+                                                                     id="re-newpassword"
+                                                                     placeholder="Re-Enter New password">
+                                                                  <div class="input-group-append">
+                                                                     <div class="input-icon-wrapper">
+                                                                        <i class="input-icon" data-feather="eye"></i>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                         <div class="col-lg-8 ml-3 mt-4">
+                                                            <h5 class="font-weight-bold">Forgot Password?</h5>
+                                                         </div>
+                                                         <div class="row">
+                                                            <div class="col-lg-3 ml-4">
+                                                               <button type="button" id="update-button"
+                                                                  class="btn btn-dark dark-border w-100 has-border-radius my-4">Update</button>
+                                                            </div>
+                                                            <div class="col-lg-3 ml-4">
+                                                               <button type="button" id="cancel-button"
+                                                                  class="btn btn-white dark-border w-100 has-border-radius my-4">Cancel</button>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+   </main>
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous">
+      </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+   <!--Dashboard JS -->
+   <script src="/public/js/dashboard.js"></script>
+   <!--FEATHER ICONS-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+   <script>
+      feather.replace()
+   </script>
+</body>
+
+</html>

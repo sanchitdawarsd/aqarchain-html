@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   <!-- Theme CSS -->
+   <link rel="stylesheet" href="/public/css/theme.css">
+   <!-- Dashboard CSS -->
+   <link rel="stylesheet" href="/public/css/dashboard.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+   <!-- Favicon -->
+   <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+   <title>Signup | AqarX</title>
+</head>
+
+<body>
+   <!-- HEADER -->
+   <header class="header">
+      <div class="container-lg">
+         <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand mx-lg-4 mx-auto" href="/">
+               <img src="/public/images/logo.svg" style="height: 130px" title="Aqarchain" alt="Aqarchain" />
+            </a>
+            <div class="flex-grow-1">
+               <div class="row d-flex justify-content-lg-end justify-content-start align-items-center mx-3">
+                  <div class="col-xl-2 col-lg-2 offset-lg-6 col-12 collapse navbar-collapse">
+                     <a class="nav-link language dropdown-toggle" href="#" id="navbarLanguageLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Language
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="navbarLanguageLink">
+                        <a class="dropdown-item">Arabic (عربى)</a>
+                        <a class="dropdown-item">English</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </div>
+   </header>
+   <div id="signup-section_1">
+      <div class="container-lg" id="signup-section_1_container">
+         <div class="row no-gutters">
+            <div class="col-lg-7 col-md-12 col-12">
+               <div class="pb-lg-9 pt-lg-6 px-lg-7 p-4 mx-lg-5 mx-2">
+                  <div class="form-heading mb-5">
+                     <h1 class="font-weight-bold text-dark mb-0">Confirm your Email Address</h1>
+                     <h1 class="font-weight-bold text-dark">for seam less experience</h1>
+                  </div>
+                  <form class="pr-lg-7">
+                     <div class="form-group">
+                        <div class="input-group secondary-input-group">
+                           <input type="email" class="form-control" id="email-1" placeholder="Email Address">
+                           <div class="input-group-append">
+                              <div class="input-icon-wrapper">
+                                 <i class="input-icon" data-feather="mail"></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <button type="button" id="send-otp-button" class="btn btn-gradient-secondary has-border-radius-5 w-100 my-4" onclick="step1Completed()">Send OTP</button>
+                     <p class="form-text text-muted">Already have an account? <span class="font-weight-bold text-dark cursor-pointer">Click here to Login</span></p>
+                  </form>
+               </div>
+
+            </div>
+            <div class="col-lg-5 col-md-12 col-12 text-lg-left text-center">
+               <img class="signup-artwork" src="public/images/signup-screen-artwork.png">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="signup-section_2" class="d-none">
+      <div class="container-lg" id="signup-section_2_container">
+         <div class="row no-gutters">
+            <div class="col-lg-7 col-md-12 col-12">
+               <div class="pb-lg-9 pt-lg-6 px-lg-7 p-4 mx-lg-5 mx-2">
+                  <div class="form-heading mb-5">
+                     <h1 class="font-weight-bold text-dark mb-0">Confirm your Email Address</h1>
+                     <h1 class="font-weight-bold text-dark">for seam less experience</h1>
+                  </div>
+                  <h4 class="text-muted">OTP is sent to:</h4>
+                  <h3 class="font-weight-bold text-dark">johndoe@gmail.com</h3>
+                  <form class="my-4">
+                     <div class="row">
+                        <div class="col-lg-9 col-12">
+                           <div class="form-group my-2">
+                              <div id="otp-outer-wrapper">
+                                 <div id="otp-inner-wrapper">
+                                    <input id="partitioned-otp" type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" onKeyPress="if(this.value.length==4) return false;" />
+                                 </div>
+                              </div>
+                           </div>
+                           <p class="form-text text-muted text-left mt-4 mb-0">Didn't receive OTP? <span class="font-weight-bold text-dark">Resend OTP</span><span></span></p>
+                        </div>
+                     </div>
+                  </form>
+                  <button id="verify-otp-button" class="btn btn-gradient-secondary has-border-radius-5 w-75 my-3" onclick="step2Completed()">Verify OTP</button>
+                  <p class="form-text text-muted">You already have an account? <span class="font-weight-bold text-dark cursor-pointer">Click here to login</span></p>
+               </div>
+
+            </div>
+            <div class="col-lg-5 col-md-12 col-12 text-lg-left text-center">
+               <img class="signup-artwork" src="public/images/signup-screen-artwork.png">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="signup-section_3" class="d-none">
+      <div class="container-lg" id="signup-section_3_container">
+         <div class="row no-gutters">
+            <div class="col-lg-7 col-md-12 col-12">
+               <div class="pb-lg-9 pt-lg-6 px-lg-7 p-4 mx-lg-5 mx-2">
+                  <img class="confirmation-check-image mt-4 mb-5" src="public/images/icon-check-mark.svg">
+                  <h2 class="font-weight-bold mb-3">Congratulations</h2>
+                  <h4 class="font-weight-medium text-muted mb-0">Your email address is verified</h4>
+                  <h4 class="font-weight-medium text-muted mb-0">successfully!</h4>
+                  <button id="signup-button" class="btn btn-gradient-secondary w-75 has-border-radius-5 mt-5 mb-4" onclick="step3Completed()">Next or Continue</button>
+                  <p class="form-text text-muted">Already have an account? <span class="font-weight-bold text-dark cursor-pointer">Click here to login</span></p>
+               </div>
+
+            </div>
+            <div class="col-lg-5 col-md-12 col-12 text-lg-left text-center">
+               <img class="signup-artwork" src="public/images/signup-screen-artwork.png">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="signup-section_4" class="d-none">
+      <div class="container-lg" id="signup-section_4_container">
+         <div class="row no-gutters">
+            <div class="col-lg-7 col-md-12 col-12">
+               <div class="pb-lg-9 pt-lg-6 px-lg-7 p-4 mx-lg-5 mx-2">
+                  <div class="form-heading mb-5">
+                     <h1 class="font-weight-bold text-dark mb-0">Confirm your Email Address</h1>
+                     <h1 class="font-weight-bold text-dark">for seam less experience</h1>
+                  </div>
+                  <form class="pr-lg-7">
+                     <div class="form-group">
+                        <div class="input-group secondary-input-group">
+                           <input type="email" class="form-control" id="email-2" placeholder="johndoe@gmail.com" disabled>
+                           <div class="input-group-append">
+                              <div class="input-icon-wrapper">
+                                 <i class="input-icon" data-feather="mail"></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <div class="input-group secondary-input-group">
+                           <input type="password" class="form-control" id="password-1" placeholder="Create Password">
+                           <div class="input-group-append">
+                              <div class="input-icon-wrapper">
+                                 <i class="input-icon" data-feather="eye"></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <div class="input-group secondary-input-group">
+                           <input type="text" class="form-control" id="confirm-password" placeholder="Confirm Password">
+                           <div class="input-group-append">
+                              <div class="input-icon-wrapper">
+                                 <i class="input-icon" data-feather="eye-off"></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="mt-4">
+                        <div class="form-check float-left">
+                           <input class="form-check-input" type="checkbox" value="" id="terms-conditions">
+                           <label class="form-check-label cursor-pointer font-weight-bold text-dark" for="terms-conditions">
+                              Agree to terms and conditions
+                           </label>
+                        </div>
+                     </div>
+                  </form>
+                  <div class="pr-lg-7">
+                     <button id="signup-button" class="btn btn-gradient-secondary has-border-radius-5 w-100 mt-5 mb-4" onclick="step4Completed()">Signup</button>
+                  </div>
+                  <p class="form-text text-muted">Already have an account? <span class="font-weight-bold text-dark cursor-pointer">Click here to login</span></p>
+               </div>
+
+            </div>
+            <div class="col-lg-5 col-md-12 col-12 text-lg-left text-center">
+               <img class="signup-artwork" src="public/images/signup-screen-artwork.png">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="signup-section_5" class="d-none">
+      <div class="container-lg" id="signup-section_5_container">
+         <div class="row no-gutters">
+            <div class="col-lg-7 col-md-12 col-12">
+               <div class="pb-lg-9 pt-lg-6 px-lg-7 p-4 mx-lg-5 mx-2">
+                  <div class="form-heading d-flex align-items-center justify-content-between mb-4">
+                     <h1 class="font-weight-bold text-dark mb-0">Sign UP</h1>
+                     <a class="cursor-pointer" onclick="step5Completed()">
+                        <h4 class="text-muted text-underline mb-0">Skip<i data-feather="chevron-right"></i></h4>
+                     </a>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-6 col-12 my-3">
+                        <input type="text" class="form-control primary-input has-border-radius-5" id="first-name" placeholder="First Name*">
+                     </div>
+                     <div class="col-lg-6 col-12 my-3">
+                        <input type="text" class="form-control primary-input has-border-radius-5" id="last-name" placeholder="Last Name*">
+                     </div>
+                     <div class="col-lg-6 col-12 my-3">
+                        <input type="text" class="form-control primary-input has-border-radius-5" id="dob" placeholder="Date of Birth*">
+                     </div>
+                     <div class="col-lg-6 col-12 my-3">
+                        <input type="text" class="form-control primary-input has-border-radius-5" id="country-of-residence" placeholder="Country of Residence*">
+                     </div>
+                     <div class="col-lg-6 col-12 my-3">
+                        <input type="text" class="form-control primary-input has-border-radius-5" id="id-no" placeholder="ID Number*">
+                     </div>
+                     <div class="col-lg-6 col-12 my-3">
+                        <input type="text" class="form-control primary-input has-border-radius-5" id="nationality" placeholder="Nationality*">
+                     </div>
+                     <div class="col-12 my-3">
+                        <input type="text" class="form-control primary-input has-border-radius-5" id="passport-no" placeholder="Passport Number*">
+                     </div>
+                  </div>
+                  <button id="signup-button" class="btn btn-gradient-secondary w-100 my-4" onclick="step5Completed()">Get Started</button>
+                  <p class="form-text text-muted">Already have an account? <span class="font-weight-bold text-dark cursor-pointer">Click here to login</span></p>
+               </div>
+
+            </div>
+            <div class="col-lg-5 col-md-12 col-12 text-lg-left text-center">
+               <img class="signup-artwork" src="public/images/signup-screen-artwork.png">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="signup-section_6" class="d-none">
+      <div class="container-lg" id="signup-section_6_container">
+         <div class="row no-gutters">
+            <div class="col-lg-7 col-md-12 col-12">
+               <div class="pb-lg-9 pt-lg-6 px-lg-7 p-4 mx-lg-5 mx-2">
+                  <div class="form-heading mb-5">
+                     <h1 class="font-weight-bold text-dark mb-0">Login or Sign Up to take</h1>
+                     <h1 class="font-weight-bold text-dark">your finance to a whole new level</h1>
+                  </div>
+                  <form class="pr-lg-7">
+                     <div class="form-group">
+                        <input type="email" class="form-control primary-input has-border-radius-5" id="email-3" placeholder="Email Address">
+                     </div>
+                     <div class="form-group">
+                        <input type="password" class="form-control primary-input has-border-radius-5" id="password-2" placeholder="Password">
+                     </div>
+                     <div class="my-5">
+                        <div class="form-check float-left">
+                           <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                           <label class="form-check-label cursor-pointer font-weight-bold text-dark" for="rememberMe">
+                              Keep me logged in
+                           </label>
+                        </div>
+                        <span class="form-text text-muted text-center font-weight-bold text-dark float-right cursor-pointer my-lg-0 my-2">Forgot Password?</span>
+                     </div>
+                     <a href="/login.html"><button type="button" id="signup-button" class="btn btn-gradient-secondary w-100 my-5">Login</button></a>
+                     <p class="form-text text-muted">Don't have an account yet? <span class="font-weight-bold text-dark cursor-pointer">Sign Up</span></p>
+                  </form>
+               </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-12 text-lg-left text-center">
+               <img class="signup-artwork" src="public/images/signup-screen-artwork.png">
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <!-- Dashboard JS -->
+   <script src="/public/js/dashboard.js"></script>
+   <!--SIGNUP JS-->
+   <script src="/public/js/signup-process.js"></script>
+   <!--FEATHER ICONS-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+   <script>
+      feather.replace()
+   </script>
+</body>
+
+</html>

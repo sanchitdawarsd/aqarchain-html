@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1566" height="230" viewBox="0 0 1566 230">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fbb042"/>
+      <stop offset="0.04" stop-color="#fbb042"/>
+      <stop offset="0.39" stop-color="#fdc010"/>
+      <stop offset="1" stop-color="#ffde11"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4d4d4d"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="BG" width="1566" height="230" opacity="0.38" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_16661" data-name="Group 16661" transform="translate(-324 -183)">
+    <path id="BG-2" data-name="BG" d="M0,0H1566V230H0Z" transform="translate(324 183)" fill="url(#linear-gradient-2)"/>
+    <g id="Mask_Group_27" data-name="Mask Group 27" transform="translate(324 183)" opacity="0.18" clip-path="url(#clip-path)">
+      <g id="Group_5764" data-name="Group 5764" transform="translate(-814.407 -24)">
+        <g id="Group_5763" data-name="Group 5763" transform="translate(0 75)">
+          <path id="Path_2" data-name="Path 2" d="M0,223.875S794.379-208.065,1651.473,128s742.118,0,742.118,0L2090.472,886.674,41.809,840Z" transform="translate(691.519)" fill="rgba(247,249,250,0.23)"/>
+          <path id="Path_2-2" data-name="Path 2" d="M.164,146.843c20.9-18.67,470.356-326.732,1327.45,9.335S2811.85,62.826,2811.85,62.826l-41.81,1008.2L125.593,987.012S-20.74,165.514.164,146.843Z" transform="translate(1.88)" fill="rgba(247,249,250,0.05)"/>
+        </g>
+        <path id="Path_2-3" data-name="Path 2" d="M.164,146.843c20.9-18.67,470.356-326.732,1327.45,9.335S2811.85,62.826,2811.85,62.826l-41.81,1008.2L125.593,987.012S-20.74,165.514.164,146.843Z" transform="translate(379.242)" fill="rgba(247,249,250,0.12)"/>
+      </g>
+    </g>
+  </g>
+</svg>

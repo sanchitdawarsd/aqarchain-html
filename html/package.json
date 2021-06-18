@@ -1,0 +1,19 @@
+{
+  "name": "aqarchain-x",
+  "version": "1.0.0",
+  "description": "Customized Bootstrap 4.0 based theme for Aqarchain Website and Dashboard",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "owl.carousel": "^2.3.4",
+    "scss-compile": "^0.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm run scss-compile",
+    "scss-compile": "node-sass -rw assets/scss -o public/css",
+    "watch": "npm run scss-compile"
+  },
+  "author": "",
+  "license": "ISC"
+}

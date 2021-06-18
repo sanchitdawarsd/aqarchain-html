@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="861" viewBox="0 0 1920 861">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_3109" data-name="Rectangle 3109" width="1920" height="861" transform="translate(0 9917)" fill="#1e282f"/>
+    </clipPath>
+  </defs>
+  <g id="landing-page-investors-section-bg" transform="translate(0 -10800)">
+    <rect id="landing-page-investors-section-bg-2" data-name="landing-page-investors-section-bg" width="1920" height="861" transform="translate(0 10800)" fill="#1e282f"/>
+    <g id="Mask_Group_22" data-name="Mask Group 22" transform="translate(0 883)" clip-path="url(#clip-path)">
+      <path id="Path_5743" data-name="Path 5743" d="M421.5,0C654.288,0,843,188.712,843,421.5S654.288,843,421.5,843,0,654.288,0,421.5,188.712,0,421.5,0Z" transform="translate(1658 9401)" fill="none" stroke="#fff" stroke-width="20" opacity="0.05"/>
+      <path id="Path_5744" data-name="Path 5744" d="M421.5,0C654.288,0,843,188.712,843,421.5S654.288,843,421.5,843,0,654.288,0,421.5,188.712,0,421.5,0Z" transform="translate(-397 10623)" fill="#fff" opacity="0.05"/>
+    </g>
+  </g>
+</svg>

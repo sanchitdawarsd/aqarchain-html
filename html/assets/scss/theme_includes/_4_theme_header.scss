@@ -1,0 +1,111 @@
+header.header
+{
+    .navbar-brand
+    {
+        padding: 15px 0;
+
+        @include media-breakpoint-up(xl) 
+        {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    .navbar-nav
+    {
+        .nav-item
+        {
+            position: relative;
+
+            .nav-link
+            {
+                font-size: $nav-link-font-size;
+                color: $nav-link-color;
+
+                &:hover
+                {
+                    color: $nav-link-color;
+                }
+
+                @include media-breakpoint-down(lg) 
+                {
+                    white-space: nowrap;
+                    font-size: $nav-link-font-size - 3px;
+                }
+            }
+
+            &.active
+            {
+                .nav-link
+                {
+                    color: $nav-link-color;
+                }
+            }
+
+            &:not(:last-child)
+            {
+                @include media-breakpoint-up(xl) 
+                {
+                    margin-right: 45px;
+                }
+
+                @include media-breakpoint-only(lg) 
+                {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+
+    .navbar-expand-lg
+    {
+       flex-flow: wrap;
+    }
+
+    .dropdown-toggle
+    {
+        &::after
+        {
+            content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 8"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>Country Dropdown</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M1.47.23,7,5.79,12.54.23c.73-.75,2,.48,1.22,1.23L7.51,7.8a.69.69,0,0,1-1,0L.22,1.46C-.51.71.74-.52,1.47.23Z"/></g></g></svg>');
+            border: none;
+            width: 15px;
+            margin-top: -10px;
+            transform: translateY(3px);
+        }
+    }
+
+    .navbar-collapse
+    {
+        padding: 16px 24px;
+        // background-color: $dropdown-link-hover-bg;
+
+        .nav-link
+        {
+            padding: 4px 0;
+        }
+
+        .dropdown-menu
+        {
+            border: none;
+            background-color: transparent;
+
+            @include media-breakpoint-up(xl) 
+            {
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                background-color: $white;
+            }
+        }
+
+        @include media-breakpoint-up(xl) 
+        {
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+
+    .header-bottom 
+    {
+        background-color: #1E282E;
+        font-size: 20px;
+    } 
+}

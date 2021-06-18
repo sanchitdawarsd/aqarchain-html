@@ -1,0 +1,373 @@
+.btn
+{
+	min-width: 100px;
+
+	&.btn-gradient
+	{
+		background-image: linear-gradient(to right, #FBB040 0%, #FFDE17 100%);
+	}
+
+	&.btn-gradient-secondary
+	{
+		color: $white;
+		background-image: linear-gradient(to right, #4D4D4D 0%,  #000000 100%);
+	}
+
+	&.btn-rounded
+	{
+		border-radius: 60px;
+
+		&-lg
+		{
+			border-radius: 70px;
+		}
+
+		&-sm
+		{
+			border-radius: 50px;
+		}
+	}
+
+	&.btn-xs
+	{
+		padding: 8px 16px;
+		font-size: 12px;
+	}
+
+	&.btn-custom-width 
+	{
+		min-width: 200px;
+	}
+
+	&.btn-outline-primary,
+	&.btn-outline-secondary,
+	&.btn-outline-success,
+	&.btn-outline-warning,
+	&.btn-outline-danger
+	{
+		border-width: 1px!important;
+
+		&:not(:hover):not(:focus)
+		{
+			color: #232323;
+		}
+	}
+}
+
+.form-control
+{
+	background: #FAFAFA;
+
+	&.secondary-input{
+		border: none;
+	}
+}
+
+.input-group
+{
+	background: #FAFAFA;
+
+	.input-group-prepend
+	{
+		margin: 0px 20px;
+
+		img
+		{
+			max-width: 27px;
+		}
+	} 
+
+	.form-control
+	{
+		background: transparent;
+	}
+}
+
+select.form-control
+{
+	position: relative;
+	appearance: none;
+	background-image: url('/public/images/icon-filter-dropdown.svg') !important;
+	background-position: center right 16px;
+	background-repeat: no-repeat;
+	background-size: 14px 6px;
+	background-color: white;
+
+	&:focus
+	{
+		background-color: white;
+	}
+
+	&.dark-select-input {
+		color: white;
+		background-position: center right 16px;
+		background-image: url('/public/images/icon-dropdown-white.svg') !important;
+		background-position: center right 10px !important;
+		background-repeat: no-repeat !important;
+		background-size: 14px 6px !important;
+		background-color: white;
+		background: #1E282F;
+		padding-right: 30px;
+
+	}
+
+	option
+	{
+		&:checked, &:active, &:hover, &:focus
+		{
+			background-color: #fae439!important;
+		}
+	}
+
+	&.secondary-select
+	{
+		background-color: #FAFAFA;
+		border: none;
+		min-width: 100px;
+	}
+}
+
+input[type="checkbox"]
+{
+	display: none;
+
+	+ label
+	{
+		position: relative;
+		padding-left: 45px;
+		display: inline-block;
+
+		&::after
+		{
+			position: absolute;
+			left: 0;
+			top: -5px;
+			display: block;
+			content: " ";
+			background-color: white;
+			box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.082);
+			border-radius: 0;
+			height: 30px;
+			width: 30px;
+			transition: 0.3s all;
+		}
+	}
+
+	&:checked
+	{
+		+ label
+		{
+			&::after
+			{
+				background-color: black;
+				border:8px solid white;
+			}
+		}
+	}
+}
+
+input[type="radio"]
+{
+	display: none;
+
+	+ label
+	{
+		position: relative;
+		padding-left: 36px;
+		display: inline-block;
+
+		&::after
+		{
+			position: absolute;
+			left: 0;
+			top: -5px;
+			display: block;
+			content: " ";
+			background-color: transparent;
+			border: 8px solid #000000;
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+			transition: 0.3s all;
+		}
+	}
+
+	&:checked
+	{
+		+ label
+		{
+			&::after
+			{
+				background-color: $primary;
+				background-image: linear-gradient(to right, #FBB040 0%, #FFDE17 100%);
+			}
+		}
+	}
+}
+
+.form-check
+{
+	padding-left: 0;
+}
+
+.label-with-tooltip 
+{
+	display: inline;
+	vertical-align: middle;
+
+	img.form-tooltip 
+	{
+	  max-width: 17px;
+	  margin: 0px 0px 0px 10px;
+	}
+}
+
+.tooltip  
+{
+	.tooltip-inner
+	{
+		background-color:#FAFAFA;
+		color: $danger;
+	}
+	
+	.tooltip-arrow 
+	{
+		border-color: #FAFAFA;
+	}
+}
+
+.primary-input 
+{
+	background: white !important;
+	border: 1px solid rgba(120, 120, 120, 0.445);
+	border-radius: 12px;
+	box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.007);
+	color: #444444;
+}
+
+.secondary-input-group
+{
+	background-color: white;
+	border: 1px solid #DDDCDB;
+	border-radius: 7px;
+
+	> * {
+		color:#999999;
+	}
+
+	.form-control {
+		border: none;
+
+		&:disabled {
+			background-color: #f0f3f586;
+
+			~ .input-group-append {
+				background-color: #f0f3f586;
+			}
+		}
+	}
+
+	.input-group-append {
+		display: flex;
+		align-items: center;
+		padding: 12px 0px;
+		padding-right: 12px;
+	}
+
+	.input-icon-wrapper
+	{
+		padding-left: 10px;
+		border-left: 1px solid #DDDCDB;
+
+		.input-icon
+		{
+			color: #999999;
+		}
+
+		.input-icon-secondary
+		{
+			color: rgba(157, 157, 157, 0.521);
+		}
+	}
+
+	::placeholder {
+		color: #999999 !important;
+	}
+}
+
+.input-error 
+{
+	border-color: #FE0707;
+}
+
+.input-success 
+{
+	border-color: #1EB966;
+}
+
+
+// OTP INPUT CUSTOM STYLE 
+#otp-inner-wrapper
+{
+	left: 0;
+	position: sticky;
+}
+  
+#otp-outer-wrapper
+{
+	width: 310px; 
+	overflow: hidden;
+}
+
+#partitioned-otp 
+{
+	padding-left: 22px;
+    letter-spacing: 63.5px;
+    border: 0;
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(70%, black), color-stop(0%, rgba(255, 255, 255, 0)));
+    background-image: linear-gradient(to left, black 70%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 77px 0.099em;
+    background-repeat: repeat-x;
+    background-position-x: 56px;
+	width: 340px;
+	font-weight: 500;
+	min-width: 340px;
+    font-size: 22px;
+	margin-top: 15px;
+	
+	&:focus
+	{
+		outline: none;
+	}
+}
+
+.input-label 
+{
+	color: #7C7D7D;
+	font-weight: 600;
+}
+
+.input-group{
+
+	&.white-dotted-border  {
+
+		::placeholder {
+			color: #D1D0CE;
+		}
+	
+		.form-control:focus {
+			background-color: transparent !important;
+			border-color: transparent !important;
+		}
+	}
+
+	&.dark-dotted-border  {
+		
+		.form-control:focus {
+			background-color: transparent !important;
+			border-color: transparent !important;
+		}
+	}
+
+}
